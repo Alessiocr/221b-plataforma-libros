@@ -2,7 +2,7 @@
 <html lang="en">
     <head>  
         <meta charset="UTF-8">
-        <title> index</title>
+        <title>221B - Página Principal</title>
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
@@ -12,114 +12,123 @@
      </head>   
         <body>
 
-            <div id="container html"> <!-- container html principal -->
+            <div id="container"> <!-- container html principal -->
                         <!-- Header de bienvenida -->
                         <div id="welcome-header">
                             <h2>Te damos la bienvenida al 221B</h2>
                         </div>
                         
-                <!-- Barra de navegación unificada -->
-                <nav class="navbar navbar-expand-never unified-navbar">
-                    <div class="container-fluid px-3">
-                        
-                        <!-- Botón hamburguesa con texto "Más" -->
-                        <div class="hamburger-menu-container">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <span class="hamburger-text">Más</span>
-                            
-                            <!-- Menú colapsable (siempre oculto) -->
-                            <div class="collapse" id="navbarNavContent">
-                                <ul class="navbar-nav dropdown-menu-custom">
-                                    <!-- Mi perfil -->
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center" href="/perfil">
-                                            <i class="fas fa-user icon-spacing"></i>
-                                            <span>Perfil</span>
-                                        </a>
-                                    </li>
-                                    <!-- Amigos -->
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center" href="/amigos">
-                                            <i class="fas fa-users icon-spacing"></i>
-                                            <span>Amigos</span>
-                                        </a>
-                                    </li>
-                                    <!-- Grupos-->
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center" href="/grupos">
-                                            <i class="fas fa-users-cog icon-spacing"></i>
-                                            <span>Grupos</span>
-                                        </a>
-                                    </li>
-                                    <!-- Configuración-->
-                                    <li class="nav-item">
-                                        <a class="nav-link d-flex align-items-center" href="/configuracion">
-                                            <i class="fas fa-cog icon-spacing"></i>
-                                            <span>Configuración</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Botones principales de navegación -->
-                        <div class="main-nav-buttons">
-                            <a href="/inicio" class="btn btn-nav-primary">Inicio</a>
-                            <a href="mis-libros.html" class="btn btn-nav-primary">Mis libros</a>
-                            <a href="/explora" class="btn btn-nav-primary">Explora</a>
-                        </div>
-                        
-                        <!-- Search Bar - visible en desktop, icono en mobile -->
-                        <div class="search-container-unified">
-                            <div class="search-bar-desktop">
-                                <input class="search-bar-top" type="text" placeholder="Título, autor, ISBN...">
-                                <button class="search-btn">
-                                    <i class="fas fa-search"></i>
+                        <!-- Barra de navegación unificada -->
+                        <nav class="navbar navbar-expand-lg" id="unified-navbar">
+                            <div class="container-fluid">
+                                
+                                <!-- Menú hamburguesa -->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
+                                
+                                <!-- Contenido colapsable del menú -->
+                                <div class="collapse navbar-collapse" id="navbarContent">
+                                    <ul class="navbar-nav me-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fas fa-bars me-2"></i>
+                                                Más opciones
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li>
+                                                    <a class="nav-link d-flex align-items-center" href="perfil.html">
+                                                        <i class="fas fa-user me-2"></i>
+                                                        <span>Perfil</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link d-flex align-items-center" href="amigos.html">
+                                                        <i class="fas fa-users me-2"></i>
+                                                        <span>Amigos</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link d-flex align-items-center" href="grupos.html">
+                                                        <i class="fas fa-users-cog me-2"></i>
+                                                        <span>Grupos</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link d-flex align-items-center" href="configuracion.html">
+                                                        <i class="fas fa-cog me-2"></i>
+                                                        <span>Configuración</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    
+                                    <!-- Botones de navegación principal -->
+                                    <div class="d-flex nav-buttons-container">
+                                        <div class="nav-buttons d-none d-lg-flex">
+                                            <a href="index.html" class="btn btn-nav-primary active">Inicio</a>
+                                            <a href="mis-libros.html" class="btn btn-nav-primary">Mis libros</a>
+                                            <a href="explora.html" class="btn btn-nav-primary">Explora</a>
+                                        </div>
+                                        
+                                        <!-- Búsqueda en escritorio -->
+                                        <div class="search-container-desktop d-none d-lg-flex">
+                                            <input type="text" class="form-control me-2" placeholder="Buscar libros...">
+                                            <button class="btn btn-search-desktop" type="button">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <!-- Búsqueda en móvil -->
+                                        <div class="search-container-mobile d-lg-none">
+                                            <button class="btn btn-search-mobile" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <button class="search-icon-mobile" data-bs-toggle="modal" data-bs-target="#searchModal">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
+                        </nav>
                         
-                        <!-- Botones de usuario -->
-                        <div class="user-buttons">
-                            <a href="/login" class="btn btn-login">
-                                Entrar
-                            </a>
-                            <a href="/register" class="btn btn-register">
-                                Registrarse
-                            </a>
-                        </div>
-                    </div>
-                </nav>
+                        <!-- Contenedor para contenido variado -->
+                        <section id="content-container">
+                            <div class="content-area">
+                                <h2>Descubre tu próxima gran lectura</h2>
+                                <p>Bienvenido a 221B, tu plataforma personal para descubrir, organizar y disfrutar de los mejores libros. Explora nuestra biblioteca, guarda tus favoritos y conecta con otros lectores.</p>
+                                
+                                <!-- Contenido destacado -->
+                                <div class="featured-content">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="feature-card">
+                                                <i class="fas fa-book fa-3x"></i>
+                                                <h4>Mi Biblioteca</h4>
+                                                <p>Organiza tus libros leídos, por leer y favoritos en un solo lugar.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="feature-card">
+                                                <i class="fas fa-compass fa-3x"></i>
+                                                <h4>Descubre</h4>
+                                                <p>Explora nuevos títulos basados en tus gustos y recomendaciones.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="feature-card">
+                                                <i class="fas fa-users fa-3x"></i>
+                                                <h4>Comunidad</h4>
+                                                <p>Conecta con otros lectores y comparte tus reseñas y opiniones.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
-                    <!-- Contenedor para animaciones de imágenes -->
-                    <section id="carousel-container">
-                        <div class="carousel-content">
-                            <!-- Aquí irán las animaciones de imágenes que se corren a la derecha -->
-                            <p>Contenedor reservado para animaciones de imágenes</p>
-                        </div>
-                    </section>
-
-                    <!-- Contenedor para contenido vario -->
-                    <section id="content-container">
-                        <div class="content-area">
-                            <!-- Aquí irá el contenido vario -->
-                            <p>Contenedor reservado para contenido vario</p>
-                        </div>
-                    </section>
-
-                    <!-- Footer -->
-                    <footer id="footer">
-                        <p>Derechos reservados &copy; 2025</p>
-                    </footer>
-    
             </div>
 
-            <!-- Modal de búsqueda para mobile -->
+            <!-- Modal de búsqueda -->
             <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -144,9 +153,8 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
             <script>
-                // Funcionalidad adicional si es necesaria
                 document.addEventListener('DOMContentLoaded', function() {
-                    console.log('Bootstrap navbar cargado correctamente');
+                    console.log('Página principal 221B cargada correctamente');
                 });
             </script>
             
