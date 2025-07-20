@@ -1,0 +1,531 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+}
+
+html {
+    width: 1060px;
+    height: 1181px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: lightgrey;
+    width: 1060px;
+    height: 1181px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding-top: 104px; /* Altura exacta: welcome-header (54px) + barra unificada (50px) */
+}
+
+/* CONTAINER PRINCIPAL */
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+/* HEADER DE BIENVENIDA */
+#welcome-header {
+    background: yellow;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    border-bottom: none; /* Eliminado el borde para evitar línea doble */
+    position: fixed; /* Fijado en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* Ancho completo */
+    z-index: 1001; /* Por encima de la barra unificada */
+    box-shadow: none; /* Sin sombra para pegarse perfectamente */
+    height: 54px; /* Altura fija: 15px padding-top + 24px font-size + 15px padding-bottom */
+}
+
+#welcome-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* BARRA DE NAVEGACIÓN UNIFICADA */
+.unified-navbar {
+    background: lightyellow;
+    padding: 6px 0;
+    border-bottom: 2px solid #ddd;
+    font-size: 10px;
+    min-height: 38px;
+    position: fixed; /* Fijada en la parte superior */
+    top: 54px; /* Exactamente donde termina el welcome-header */
+    left: 0;
+    right: 0;
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra para destacar */
+    height: 50px; /* Altura fija: 6px padding-top + 38px min-height + 6px padding-bottom */
+}
+
+.unified-navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    max-width: 1060px; /* Mismo ancho que el body */
+    margin: 0 auto; /* Centrado */
+    padding: 0 20px; /* Padding horizontal para no tocar los bordes */
+}
+
+/* Search container unificado */
+.search-container-unified {
+    flex: 1;
+    max-width: 300px; /* Aumentado de 280px a 300px */
+    position: relative;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+}
+
+.search-bar-desktop {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.search-icon-mobile {
+    display: none;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon-mobile:hover {
+    background-color: #f0f0f0;
+}
+
+/* Botones principales de navegación */
+.main-nav-buttons {
+    display: flex;
+    gap: 3px; /* Reducido de 5px a 3px */
+    align-items: center;
+}
+
+/* HEADER ORIGINAL (ya no se usa pero mantenemos por compatibilidad) */
+#header {
+    display: none; /* Ocultamos el header original */
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* BOTONES DE USUARIO EN HEADER */
+.user-buttons {
+    display: flex;
+    gap: 3px; /* Reducido de 4px a 3px */
+    align-items: center;
+}
+
+.btn-login {
+    background: transparent;
+    color: rgb(85, 51, 6);
+    border: none;
+    padding: 6px 10px; /* Reducido de 6px 12px a 6px 10px */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: normal; /* Eliminada la negrita */
+    transition: all 0.3s ease;
+    font-size: 13px;
+}
+
+.btn-login:hover {
+    background: rgba(85, 51, 6, 0.1); /* Hover igual a otros botones de la barra */
+    color: rgb(85, 51, 6);
+}
+
+.btn-register {
+    background: black; /* Fondo negro destacado */
+    color: white; /* Fuente blanca */
+    border: none;
+    padding: 6px 10px; /* Reducido de 6px 12px a 6px 10px */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: normal; /* Eliminada la negrita */
+    transition: all 0.3s ease;
+    font-size: 13px;
+}
+
+.btn-register:hover {
+    background: rgba(85, 51, 6, 0.1); /* Hover igual a otros botones */
+    color: rgb(85, 51, 6); /* Color igual al hover de otros botones */
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-container-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-bar-top {
+    width: 100%;
+    padding: 8px 40px 8px 12px; /* Reducido el padding vertical de 10px a 8px y horizontal */
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 13px; /* Reducido de 16px a 13px */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar-top:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+}
+
+.search-btn {
+    position: absolute;
+    right: 6px; /* Reducido de 8px a 6px */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 13px; /* Reducido de 14px a 13px */
+    padding: 5px; /* Reducido de 6px a 5px */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #f0f0f0;
+    color: #0d6efd;
+}
+
+/* NAVEGACIÓN BOOTSTRAP */
+.navbar {
+    background: lightyellow !important;
+    padding: 0;
+    height: 70px;
+    border-bottom: 2px solid #ddd;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    padding: 0;
+}
+
+/* MENÚ HAMBURGUESA CON TEXTO */
+.hamburger-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 80px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+.hamburger-menu-container:hover {
+    background: rgba(85, 51, 6, 0.1);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+    background: none;
+}
+
+.hamburger-text {
+    font-size: 12px;
+    color: rgb(85, 51, 6);
+    font-weight: normal; /* Eliminada la negrita */
+    margin-top: 2px;
+}
+
+/* MENÚ DESPLEGABLE PERSONALIZADO */
+.dropdown-menu-custom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 200px;
+    z-index: 1000;
+    padding: 10px 0;
+    margin-top: 5px;
+}
+
+.dropdown-menu-custom .nav-item {
+    list-style: none;
+}
+
+.dropdown-menu-custom .nav-link {
+    padding: 8px 15px !important;
+    color: rgb(85, 51, 6) !important;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-menu-custom .nav-link:hover {
+    background: #f8f9fa !important;
+    color: black !important;
+}
+
+.icon-spacing {
+    margin-right: 6px;
+}
+
+.icon-spacing {
+    margin-right: 8px;
+}
+
+/* BOTONES PRINCIPALES DE NAVEGACIÓN */
+.main-nav-buttons {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    flex: 1;
+    height: 100%;
+}
+
+.btn-nav-primary {
+    background: transparent;
+    color: rgb(85, 51, 6);
+    border: none;
+    padding: 8px 8px; /* Reducido de 8px 10px a 8px 8px */
+    text-decoration: none;
+    font-weight: normal; /* Eliminada la negrita */
+    transition: all 0.3s ease;
+    font-size: 13px; /* Tamaño de fuente reducido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+
+.btn-nav-primary:hover {
+    background: rgba(85, 51, 6, 0.1);
+    color: rgb(85, 51, 6);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 20px;
+    height: 2px;
+    background-color: rgb(85, 51, 6);
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: rgb(85, 51, 6);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -6px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -6px;
+}
+
+.hamburger-text {
+    font-size: 10px;
+    color: rgb(85, 51, 6);
+    font-weight: normal; /* Eliminada la negrita */
+    margin-top: 2px;
+}
+
+/* CARRITO */
+.cart-link {
+    position: relative;
+}
+
+.cart-count {
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* CONTENEDORES PRINCIPALES */
+#carousel-container {
+    background: #f8f9fa;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-content {
+    width: 100%;
+    color: #666;
+    font-size: 18px;
+}
+
+#content-container {
+    background: #ffffff;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-area {
+    width: 100%;
+    color: #666;
+    font-size: 18px;
+}
+
+/* FOOTER */
+#footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #welcome-header {
+        height: 50px; /* Altura reducida en mobile: 15px + 20px font-size + 15px */
+    }
+    
+    body {
+        padding-top: 88px; /* welcome-header (50px) + barra unificada (38px) */
+    }
+    
+    #welcome-header h2 {
+        font-size: 20px;
+    }
+    
+    .unified-navbar {
+        top: 50px; /* Exactamente donde termina el header en mobile */
+        height: 38px; /* Altura reducida en mobile */
+        min-height: 32px;
+    }
+    
+    /* Navegación unificada responsive */
+    .unified-navbar .container-fluid {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0 10px; /* Menos padding en mobile */
+    }
+    
+    .main-nav-buttons {
+        gap: 3px; /* Reducido de 5px a 3px */
+    }
+    
+    .main-nav-buttons .btn {
+        font-size: 12px;
+        padding: 6px 8px; /* Reducido el padding horizontal */
+    }
+    
+    /* Ocultar search bar desktop y mostrar icono mobile */
+    .search-bar-desktop {
+        display: none;
+    }
+    
+    .search-icon-mobile {
+        display: block;
+    }
+    
+    .user-buttons {
+        gap: 3px; /* Reducido de 4px a 3px */
+    }
+    
+    .user-buttons .btn {
+        font-size: 12px;
+        padding: 5px 6px; /* Reducido el padding */
+    }
+    
+    .navbar {
+        height: 60px;
+    }
+    
+    #header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .user-buttons {
+        order: 1;
+    }
+    
+    .search-container-top {
+        order: 2;
+        max-width: 100%;
+    }
+    
+    .hamburger-menu-container {
+        min-width: 60px;
+    }
+    
+    .main-nav-buttons {
+        justify-content: center;
+    }
+    
+    .btn-nav-primary,
+    .btn-login,
+    .btn-register {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .dropdown-menu-custom {
+        min-width: 180px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #carousel-container,
+    #content-container {
+        margin: 10px 0;
+        padding: 20px 10px;
+    }
+}
+

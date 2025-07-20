@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <meta charset="UTF-8">
+        <title>Mis Libros - 221B</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- CSS personalizado -->
+        <link rel="stylesheet" href="css/mis-libros.css">
+     </head>   
+        <body>
+
+            <div id="container"> <!-- container html principal -->
+                        
+                        <!-- Header superior amarillo -->
+                        <header id="top-header">
+                            <h1>221B</h1>
+                        </header>
+                        
+                        <!-- Contenedor para contenido variado -->
+                        <section id="content-container">
+                            <div class="content-area">
+                                <h2>Mis Libros</h2>
+                                <p>Aquí se mostrará tu biblioteca personal con todos tus libros favoritos, leídos y por leer.</p>
+                                
+                                <!-- Aquí puedes agregar el contenido que desees -->
+                                <div class="books-grid">
+                                    <div class="book-placeholder">
+                                        <i class="fas fa-book fa-3x"></i>
+                                        <p>Libro 1</p>
+                                    </div>
+                                    <div class="book-placeholder">
+                                        <i class="fas fa-book fa-3x"></i>
+                                        <p>Libro 2</p>
+                                    </div>
+                                    <div class="book-placeholder">
+                                        <i class="fas fa-book fa-3x"></i>
+                                        <p>Libro 3</p>
+                                    </div>
+                                    <div class="book-placeholder">
+                                        <i class="fas fa-book fa-3x"></i>
+                                        <p>Libro 4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+    
+            </div>
+
+            <!-- Barra de navegación fija inferior -->
+            <nav class="bottom-navbar fixed-bottom">
+                <div class="container-fluid">
+                    <div class="bottom-nav-content">
+                        
+                        <!-- Botones principales -->
+                        <div class="bottom-nav-buttons">
+                            <a href="sherlock2.html" class="btn btn-bottom-nav">
+                                <i class="fas fa-home"></i>
+                                <span>Inicio</span>
+                            </a>
+                            <a href="mis-libros.html" class="btn btn-bottom-nav active">
+                                <i class="fas fa-book"></i>
+                                <span>Mis libros</span>
+                            </a>
+                            <a href="descubre.html" class="btn btn-bottom-nav">
+                                <i class="fas fa-compass"></i>
+                                <span>Descubre</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Botón de búsqueda -->
+                        <div class="search-btn-container">
+                            <button class="btn btn-search" data-bs-toggle="modal" data-bs-target="#searchModal">
+                                <i class="fas fa-search"></i>
+                                <span>Buscar</span>
+                            </button>
+                        </div>
+
+                        <!-- Menú hamburguesa siempre colapsada (ahora al final) -->
+                        <div class="hamburger-menu-container">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavContent" aria-controls="bottomNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <span class="hamburger-text">Más</span>
+                            
+                            <!-- Menú colapsable estético -->
+                            <div class="collapse" id="bottomNavContent">
+                                <div class="elegant-dropdown-menu">
+                                    <div class="menu-grid">
+                                        <a href="perfil.html" class="menu-item">
+                                            <div class="icon-circle">
+                                                <i class="fas fa-user"></i>
+                                            </div>
+                                            <span class="menu-text">Perfil</span>
+                                        </a>
+                                        <a href="amigos.html" class="menu-item">
+                                            <div class="icon-circle">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <span class="menu-text">Amigos</span>
+                                        </a>
+                                        <a href="grupos.html" class="menu-item">
+                                            <div class="icon-circle">
+                                                <i class="fas fa-users-cog"></i>
+                                            </div>
+                                            <span class="menu-text">Grupos</span>
+                                        </a>
+                                        <a href="configuracion.html" class="menu-item">
+                                            <div class="icon-circle">
+                                                <i class="fas fa-cog"></i>
+                                            </div>
+                                            <span class="menu-text">Config.</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Modal de búsqueda -->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="searchModalLabel">Buscar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="search-container">
+                                <input type="text" class="form-control" placeholder="Título, autor, ISBN...">
+                                <button class="btn btn-primary mt-2">
+                                    <i class="fas fa-search me-2"></i>
+                                    Buscar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JavaScript -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    console.log('Página Mis Libros cargada correctamente');
+                });
+            </script>
+            
+        </body>
+   
+</html>

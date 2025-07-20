@@ -1,0 +1,9 @@
+# Archivos y carpetas a ignorar en Git
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.env
+*.tmp
+*.temp
