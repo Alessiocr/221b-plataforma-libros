@@ -52,4 +52,4 @@ jobs:
           app-name: '221b-libros-app'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D5D2CB155E7044B8AF8863EFE33FCA39 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5FA4DC39B7B74FD1945BA2C922DE8782 }}
