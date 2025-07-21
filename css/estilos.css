@@ -168,13 +168,13 @@ body {
 
 .navbar-toggler {
     border: none;
-    padding: 6px 12px; /* Reducido de 8px 16px a 6px 12px */
+    padding: 8px 10px; /* Padding más equilibrado */
     background: none;
 }
 
 .navbar-toggler-icon {
     background-image: none;
-    width: 28px; /* Reducido de 40px a 28px */
+    width: 32px; /* Tamaño similar a los iconos de otros botones */
     height: 3px; /* Reducido de 4px a 3px */
     background-color: #323232;
     position: relative;
@@ -185,7 +185,7 @@ body {
 .navbar-toggler-icon::after {
     content: '';
     position: absolute;
-    width: 28px; /* Reducido de 40px a 28px */
+    width: 32px; /* Mismo ancho que el principal */
     height: 3px; /* Reducido de 4px a 3px */
     background-color: #323232;
     transition: all 0.3s ease;
@@ -297,7 +297,7 @@ body {
 }
 
 .menu-text {
-    font-size: 32px; /* Aumentado de 28px a 32px para mejor legibilidad */
+    font-size: 24px; /* Reducido de 32px para mejor balance web/móvil */
     font-weight: normal; /* Eliminada la negrita */
     color: #323232; /* Cambiado a gris oscuro */
     text-align: center;
@@ -442,10 +442,31 @@ body {
     
     #dark-header {
         padding: 12px 0; /* Padding ligeramente reducido en móvil */
+        margin: 0; /* Sin margen en móvil */
     }
     
     #dark-header p {
         font-size: 16px; /* Mantenemos el tamaño legible en móvil */
+        margin: 0; /* Sin margen */
+    }
+    
+    /* TOP HEADER EN MÓVIL */
+    #top-header {
+        margin: 0 !important; /* Forzar sin margen en móvil */
+        border-bottom: none !important; /* Sin borde en móvil */
+        padding: 12px 0; /* Padding reducido en móvil */
+    }
+    
+    #top-header h1 {
+        font-size: 24px; /* Más pequeño en móvil */
+        margin: 0; /* Sin margen */
+    }
+    
+    /* CONTENEDOR DE CONTENIDO EN MÓVIL */
+    #content-container {
+        margin: 0 !important; /* Sin margen en móvil */
+        border-radius: 0 !important; /* Sin border-radius en móvil */
+        box-shadow: none !important; /* Sin sombra en móvil */
     }
     
     /* NAVEGACIÓN EN MÓVIL - TAMAÑOS OPTIMIZADOS */
@@ -529,33 +550,20 @@ body {
     
     .menu-item {
         padding: 15px 5px;
-        min-height: 140px; /* Reducido para móvil */
+        min-height: 120px; /* Reducido para móvil */
     }
     
     .icon-circle {
-        width: 60px; /* Más pequeño en móvil */
-        height: 60px;
-    }
-    
-    .icon-circle i {
-        font-size: 24px; /* Más pequeño en móvil */
-    }
-    
-    .menu-text {
-        font-size: 18px; /* Más pequeño en móvil */
-    }
-    
-    .icon-circle {
-        width: 50px;
+        width: 50px; /* Más pequeño en móvil */
         height: 50px;
     }
     
     .icon-circle i {
-        font-size: 20px;
+        font-size: 20px; /* Más pequeño en móvil */
     }
     
     .menu-text {
-        font-size: 11px;
+        font-size: 14px; /* Tamaño legible en móvil */
         line-height: 1.2;
     }
 }
