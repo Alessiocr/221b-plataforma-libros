@@ -523,7 +523,7 @@ body.inicio-page {
 .nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px; /* Aumentado a 40px para mejor distribución del espacio */
     align-items: center;
 }
 
@@ -531,11 +531,11 @@ body.inicio-page {
     background: transparent;
     color: #323232;
     border: none;
-    padding: 10px 20px;
+    padding: 14px 28px; /* Aumentado a 14px 28px */
     text-decoration: none;
     font-weight: normal;
     transition: all 0.3s ease;
-    font-size: 16px;
+    font-size: 20px; /* Aumentado de 18px a 20px */
     border-radius: 5px;
 }
 
