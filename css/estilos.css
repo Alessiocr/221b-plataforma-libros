@@ -7,7 +7,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: Lota, sans-serif;
+    font-size: 16px;
 }
 
 
@@ -188,9 +189,9 @@ body.inicio-page {
 .content-section {
     background: #fafafa;
     padding: 30px 25px;
-    margin: 0px 0;
-    border-radius: 8px;
-    border: 1px solid #e8e8e8;
+    margin: 0px 0 10px 0;
+    border-radius: 0px;
+    border: 0px solid #e8e8e8;
     transition: all 0.3s ease;
     text-align: left;
 }
@@ -222,7 +223,7 @@ body.inicio-page {
     background: linear-gradient(135deg, #f5f2ed 0%, #e8ddd4 100%) !important;
     border: 2px solid #d4c4b0 !important;
     margin: 0px 0 5px 0;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 .intro-header {
@@ -237,7 +238,7 @@ body.inicio-page {
 
 .intro-header h3 {
     color: rgb(85, 51, 6);
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     margin: 0;
     display: flex;
