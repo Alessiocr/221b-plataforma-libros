@@ -1,0 +1,462 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+}
+
+html {
+    width: 1060px;
+    height: 1181px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: lightgrey;
+    width: 1060px;
+    height: 1181px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding-bottom: 70px; /* Espacio para la barra fija inferior */
+}
+
+/* CONTAINER PRINCIPAL */
+#container {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+}
+
+/* HEADER SUPERIOR AMARILLO */
+#top-header {
+    background: yellow;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: normal; /* Eliminada la negrita */
+    border-bottom: 2px solid #ddd;
+}
+
+#top-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal; /* Eliminada la negrita */
+}
+
+/* CONTENEDOR DE CONTENIDO */
+#content-container {
+    background: #ffffff;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    min-height: 600px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-area {
+    width: 100%;
+    text-align: center;
+}
+
+.content-area h2 {
+    color: rgb(85, 51, 6);
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.content-area p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* GRID DE LIBROS PLACEHOLDER */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.book-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.book-placeholder:hover {
+    border-color: rgb(85, 51, 6);
+    background: #fff;
+}
+
+.book-placeholder i {
+    color: rgb(85, 51, 6);
+    margin-bottom: 10px;
+}
+
+.book-placeholder p {
+    color: #666;
+    margin: 0;
+    font-weight: normal; /* Eliminada la negrita */
+}
+
+/* BARRA DE NAVEGACIÓN INFERIOR FIJA */
+.bottom-navbar {
+    background: lightyellow;
+    border-top: 2px solid #ddd;
+    padding: 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    height: 70px;
+}
+
+.bottom-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    gap: 0; /* Sin espacios entre elementos */
+}
+
+/* MENÚ HAMBURGUESA EN BARRA INFERIOR */
+.hamburger-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 1; /* Toma 1 parte del espacio disponible, igual que búsqueda */
+    background: transparent;
+    transition: background 0.3s ease;
+    min-width: 0; /* Permite que se comprima uniformemente */
+}
+
+.hamburger-menu-container:hover {
+    background: rgba(85, 51, 6, 0.1);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 4px 8px;
+    background: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 20px;
+    height: 2px;
+    background-color: rgb(85, 51, 6);
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: rgb(85, 51, 6);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -6px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -6px;
+}
+
+.hamburger-text {
+    font-size: 13px; /* Aumentado de 10px a 13px */
+    color: rgb(85, 51, 6);
+    font-weight: normal; /* Eliminada la negrita */
+    margin-top: 2px;
+}
+
+/* MENÚ DESPLEGABLE ELEGANTE */
+.elegant-dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: rgb(245, 245, 220); /* Beige claro */
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+    margin-bottom: 10px;
+    padding: 40px; /* Aumentado de 30px a 40px para más espacio */
+    /* Tamaño aumentado para coincidir con el contenedor central */
+    min-width: 1000px; /* Aumentado significativamente para coincidir con el contenedor central */
+    max-width: 1040px; /* Similar al contenedor central de 1060px */
+    /* Centrar el menú */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cambiado a 4 columnas para mejor distribución con el ancho amplio */
+    gap: 30px; /* Aumentado de 20px a 30px para más espacio */
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 25px 20px; /* Aumentado de 20px 15px a 25px 20px para más espacio */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(85, 51, 6, 0.1);
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(85, 51, 6, 0.2);
+}
+
+.icon-circle {
+    width: 90px; /* Aumentado de 70px a 90px para iconos más grandes */
+    height: 90px; /* Aumentado de 70px a 90px para iconos más grandes */
+    border-radius: 50%;
+    background: rgba(85, 51, 6, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; /* Aumentado de 12px a 15px */
+    transition: all 0.3s ease;
+    border: 2px solid rgba(85, 51, 6, 0.2);
+}
+
+.menu-item:hover .icon-circle {
+    background: rgba(85, 51, 6, 0.2);
+    border-color: rgba(85, 51, 6, 0.4);
+    transform: scale(1.05);
+}
+
+.icon-circle i {
+    font-size: 44px; /* DUPLICADO: de 22px a 44px (x2 respecto a botones actualizados) */
+    color: rgb(85, 51, 6);
+}
+
+.menu-text {
+    font-size: 30px; /* DUPLICADO: de 15px a 30px (x2 respecto a botones actualizados) */
+    font-weight: normal; /* Eliminada la negrita */
+    color: rgb(85, 51, 6);
+    text-align: center;
+    margin-top: 4px; /* Aumentado ligeramente */
+}
+
+.menu-item:hover .menu-text {
+    color: rgb(65, 35, 0);
+}
+
+/* BOTONES PRINCIPALES INFERIORES */
+.bottom-nav-buttons {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    flex: 3; /* Toma 3 partes del espacio disponible */
+    height: 100%;
+}
+
+.btn-bottom-nav {
+    background: transparent;
+    color: rgb(85, 51, 6);
+    border: none;
+    padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
+    text-decoration: none;
+    font-weight: normal; /* Eliminada la negrita */
+    transition: all 0.3s ease;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    min-width: 0; /* Permite que los botones se compriman uniformemente */
+}
+
+.btn-bottom-nav:hover, .btn-bottom-nav.active {
+    background: rgba(85, 51, 6, 0.1);
+    color: rgb(85, 51, 6);
+}
+
+.btn-bottom-nav.active {
+    background: rgba(85, 51, 6, 0.15);
+    color: rgb(85, 51, 6);
+    font-weight: normal; /* Eliminada la negrita */
+}
+
+.btn-bottom-nav i {
+    font-size: 22px; /* Aumentado de 18px a 22px */
+    margin-bottom: 3px; /* Aumentado ligeramente el margen */
+}
+
+.btn-bottom-nav span {
+    font-size: 15px; /* Aumentado de 13px a 15px */
+}
+
+/* BOTÓN DE BÚSQUEDA */
+.search-btn-container {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    flex: 1; /* Toma 1 parte del espacio disponible */
+}
+
+.btn-search {
+    background: transparent;
+    color: rgb(85, 51, 6);
+    border: none;
+    padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
+    font-weight: normal; /* Eliminada la negrita */
+    transition: all 0.3s ease;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-width: 0; /* Permite que el botón se comprima uniformemente */
+}
+
+.btn-search:hover {
+    background: rgba(85, 51, 6, 0.1);
+    color: rgb(85, 51, 6);
+}
+
+.btn-search i {
+    font-size: 22px; /* Aumentado de 18px a 22px */
+    margin-bottom: 3px; /* Aumentado ligeramente el margen */
+}
+
+.btn-search span {
+    font-size: 15px; /* Aumentado de 13px a 15px */
+}
+
+/* MODAL DE BÚSQUEDA */
+.search-container {
+    text-align: center;
+}
+
+.search-container .form-control {
+    border-radius: 25px;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+}
+
+.search-container .form-control:focus {
+    border-color: rgb(85, 51, 6);
+    box-shadow: 0 0 5px rgba(85, 51, 6, 0.3);
+}
+
+.search-container .btn-primary {
+    background: rgb(85, 51, 6);
+    border-color: rgb(85, 51, 6);
+    border-radius: 25px;
+    padding: 10px 30px;
+}
+
+.search-container .btn-primary:hover {
+    background: rgba(85, 51, 6, 0.9);
+    border-color: rgba(85, 51, 6, 0.9);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    html, body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding-bottom: 60px;
+    }
+    
+    .bottom-navbar {
+        height: 60px;
+    }
+    
+    #top-header h1 {
+        font-size: 28px;
+    }
+    
+    #content-container {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+    
+    .books-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .hamburger-menu-container {
+        min-width: 60px;
+    }
+    
+    .btn-bottom-nav, .btn-search {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+    
+    .btn-bottom-nav i, .btn-search i {
+        font-size: 12px;
+    }
+    
+    .btn-bottom-nav span, .btn-search span {
+        font-size: 9px;
+    }
+    
+    .btn-search {
+        min-width: 60px;
+    }
+    
+    /* MENÚ RESPONSIVO EN MÓVIL */
+    .elegant-dropdown-menu {
+        /* En móvil: ocupa todo el ancho de la pantalla */
+        left: 0;
+        right: 0;
+        min-width: calc(100vw - 40px);
+        max-width: calc(100vw - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 25px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en móvil */
+        gap: 20px;
+    }
+    
+    .menu-item {
+        padding: 15px 5px;
+    }
+    
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .icon-circle i {
+        font-size: 20px;
+    }
+    
+    .menu-text {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+}
