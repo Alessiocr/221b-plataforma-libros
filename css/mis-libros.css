@@ -34,14 +34,14 @@ body {
     color: black;
     text-align: center;
     padding: 15px 0;
-    font-weight: bold;
+    font-weight: normal; /* Eliminada la negrita */
     border-bottom: 2px solid #ddd;
 }
 
 #top-header h1 {
     margin: 0;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: normal; /* Eliminada la negrita */
 }
 
 /* CONTENEDOR DE CONTENIDO */
@@ -101,7 +101,7 @@ body {
 .book-placeholder p {
     color: #666;
     margin: 0;
-    font-weight: 600;
+    font-weight: normal; /* Eliminada la negrita */
 }
 
 /* BARRA DE NAVEGACIÓN INFERIOR FIJA */
@@ -179,7 +179,7 @@ body {
 .hamburger-text {
     font-size: 10px;
     color: rgb(85, 51, 6);
-    font-weight: 600;
+    font-weight: normal; /* Eliminada la negrita */
     margin-top: 2px;
 }
 
@@ -194,16 +194,16 @@ body {
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
     z-index: 1000;
     margin-bottom: 10px;
-    padding: 20px;
-    /* Para escritorio: tamaño fijo más grande */
-    min-width: 280px;
-    max-width: 320px;
+    padding: 30px; /* Aumentado de 20px a 30px */
+    /* Tamaño aumentado considerablemente */
+    min-width: 400px; /* Aumentado de 280px a 400px */
+    max-width: 480px; /* Aumentado de 320px a 480px */
 }
 
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px; /* Aumentado de 15px a 20px */
 }
 
 .menu-item {
@@ -211,7 +211,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    padding: 15px 10px;
+    padding: 20px 15px; /* Aumentado de 15px 10px a 20px 15px */
     border-radius: 12px;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.3);
@@ -225,14 +225,14 @@ body {
 }
 
 .icon-circle {
-    width: 45px;
-    height: 45px;
+    width: 70px; /* Aumentado de 45px a 70px */
+    height: 70px; /* Aumentado de 45px a 70px */
     border-radius: 50%;
     background: rgba(85, 51, 6, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 12px; /* Aumentado de 8px a 12px */
     transition: all 0.3s ease;
     border: 2px solid rgba(85, 51, 6, 0.2);
 }
@@ -244,16 +244,16 @@ body {
 }
 
 .icon-circle i {
-    font-size: 18px;
+    font-size: 36px; /* DUPLICADO: de 18px a 36px (x2 respecto a botones) */
     color: rgb(85, 51, 6);
 }
 
 .menu-text {
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 26px; /* DUPLICADO: de 13px a 26px (x2 respecto a botones) */
+    font-weight: normal; /* Eliminada la negrita */
     color: rgb(85, 51, 6);
     text-align: center;
-    margin-top: 2px;
+    margin-top: 4px; /* Aumentado ligeramente */
 }
 
 .menu-item:hover .menu-text {
@@ -275,7 +275,7 @@ body {
     border: none;
     padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
     text-decoration: none;
-    font-weight: 600;
+    font-weight: normal; /* Eliminada la negrita */
     transition: all 0.3s ease;
     font-size: 12px;
     display: flex;
@@ -295,16 +295,16 @@ body {
 .btn-bottom-nav.active {
     background: rgba(85, 51, 6, 0.15);
     color: rgb(85, 51, 6);
-    font-weight: bold;
+    font-weight: normal; /* Eliminada la negrita */
 }
 
 .btn-bottom-nav i {
-    font-size: 14px;
-    margin-bottom: 2px;
+    font-size: 18px; /* Aumentado de 14px a 18px */
+    margin-bottom: 3px; /* Aumentado ligeramente el margen */
 }
 
 .btn-bottom-nav span {
-    font-size: 10px;
+    font-size: 13px; /* Aumentado de 10px a 13px */
 }
 
 /* BOTÓN DE BÚSQUEDA */
@@ -320,7 +320,7 @@ body {
     color: rgb(85, 51, 6);
     border: none;
     padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
-    font-weight: 600;
+    font-weight: normal; /* Eliminada la negrita */
     transition: all 0.3s ease;
     font-size: 12px;
     display: flex;
@@ -338,12 +338,12 @@ body {
 }
 
 .btn-search i {
-    font-size: 14px;
-    margin-bottom: 2px;
+    font-size: 18px; /* Aumentado de 14px a 18px */
+    margin-bottom: 3px; /* Aumentado ligeramente el margen */
 }
 
 .btn-search span {
-    font-size: 10px;
+    font-size: 13px; /* Aumentado de 10px a 13px */
 }
 
 /* MODAL DE BÚSQUEDA */
