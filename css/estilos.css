@@ -187,7 +187,7 @@ body {
 .elegant-dropdown-menu {
     position: fixed; /* Cambiado a fixed para mejor control */
     bottom: 90px; /* Posicionado justo encima de la barra (altura 90px) */
-    /* Centrado respecto a la pantalla con los mismos márgenes que el contenedor */
+    /* Centrado respecto a la pantalla con el mismo ancho que el header */
     left: 50%;
     transform: translateX(-50%);
     background: rgb(245, 245, 220); /* Beige claro */
@@ -197,9 +197,9 @@ body {
     z-index: 1000;
     margin-bottom: 10px;
     padding: 40px; /* Aumentado para más contenido */
-    /* Tamaño que respeta exactamente los márgenes del contenedor central */
-    width: 1020px; /* Ancho del contenedor central (1060px - 40px padding) */
-    max-width: calc(100vw - 40px); /* Respeta márgenes en pantallas pequeñas */
+    /* Tamaño que coincide con el header (ancho completo disponible) */
+    width: 1060px; /* Ancho completo como el header */
+    max-width: calc(100vw - 20px); /* Margen mínimo de 10px a cada lado en móviles */
     min-height: 300px; /* 50% más alto que antes */
 }
 
@@ -429,14 +429,15 @@ body {
     
     /* MENÚ RESPONSIVO EN MÓVIL */
     .elegant-dropdown-menu {
-        /* En móvil: ocupa todo el ancho de la pantalla */
-        left: 0;
-        right: 0;
-        min-width: calc(100vw - 40px);
-        max-width: calc(100vw - 40px);
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 25px;
+        /* En móvil: aprovecha casi todo el ancho de la pantalla */
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100vw - 10px); /* Solo 5px de margen a cada lado */
+        max-width: calc(100vw - 10px);
+        min-width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px; /* Padding reducido en móvil */
     }
     
     .menu-grid {
