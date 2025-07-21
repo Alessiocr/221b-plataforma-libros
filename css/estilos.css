@@ -19,13 +19,13 @@ body {
     height: 1181px;
     margin: 0 auto;
     overflow-x: hidden;
-    padding-bottom: 70px; /* Espacio para la barra fija inferior */
+    padding-bottom: 140px; /* DUPLICADO: de 70px a 140px para la barra fija inferior más alta */
 }
 
 /* CONTAINER PRINCIPAL */
 #container {
     width: 100%;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 140px); /* Ajustado para la nueva altura de barra */
 }
 
 /* HEADER SUPERIOR AMARILLO */
@@ -111,7 +111,7 @@ body {
     padding: 0;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
-    height: 70px;
+    height: 140px; /* DUPLICADO: de 70px a 140px (x2) para acomodar botones más grandes */
 }
 
 .bottom-nav-content {
@@ -145,14 +145,14 @@ body {
 
 .navbar-toggler {
     border: none;
-    padding: 4px 8px;
+    padding: 8px 16px; /* DUPLICADO: de 4px 8px a 8px 16px (x2) */
     background: none;
 }
 
 .navbar-toggler-icon {
     background-image: none;
-    width: 20px;
-    height: 2px;
+    width: 40px; /* DUPLICADO: de 20px a 40px (x2) */
+    height: 4px; /* DUPLICADO: de 2px a 4px (x2) */
     background-color: rgb(85, 51, 6);
     position: relative;
     display: inline-block;
@@ -162,25 +162,25 @@ body {
 .navbar-toggler-icon::after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 2px;
+    width: 40px; /* DUPLICADO: de 20px a 40px (x2) */
+    height: 4px; /* DUPLICADO: de 2px a 4px (x2) */
     background-color: rgb(85, 51, 6);
     transition: all 0.3s ease;
 }
 
 .navbar-toggler-icon::before {
-    top: -6px;
+    top: -12px; /* DUPLICADO: de -6px a -12px (x2) */
 }
 
 .navbar-toggler-icon::after {
-    bottom: -6px;
+    bottom: -12px; /* DUPLICADO: de -6px a -12px (x2) */
 }
 
 .hamburger-text {
-    font-size: 17px; /* Aumentado de 13px a 17px para coincidir con los botones */
+    font-size: 34px; /* DUPLICADO: de 17px a 34px (x2) para coincidir con los botones */
     color: rgb(85, 51, 6);
     font-weight: normal; /* Eliminada la negrita */
-    margin-top: 2px;
+    margin-top: 4px; /* Aumentado ligeramente el margen */
 }
 
 /* MENÚ DESPLEGABLE ELEGANTE */
@@ -299,12 +299,12 @@ body {
 }
 
 .btn-bottom-nav i {
-    font-size: 26px; /* Aumentado de 22px a 26px */
-    margin-bottom: 4px; /* Aumentado ligeramente el margen */
+    font-size: 52px; /* DUPLICADO: de 26px a 52px (x2) */
+    margin-bottom: 8px; /* Aumentado el margen para los iconos más grandes */
 }
 
 .btn-bottom-nav span {
-    font-size: 17px; /* Aumentado de 15px a 17px */
+    font-size: 34px; /* DUPLICADO: de 17px a 34px (x2) */
 }
 
 /* BOTÓN DE BÚSQUEDA */
@@ -338,12 +338,12 @@ body {
 }
 
 .btn-search i {
-    font-size: 26px; /* Aumentado de 22px a 26px */
-    margin-bottom: 4px; /* Aumentado ligeramente el margen */
+    font-size: 52px; /* DUPLICADO: de 26px a 52px (x2) */
+    margin-bottom: 8px; /* Aumentado el margen para los iconos más grandes */
 }
 
 .btn-search span {
-    font-size: 17px; /* Aumentado de 15px a 17px */
+    font-size: 34px; /* DUPLICADO: de 17px a 34px (x2) */
 }
 
 /* MODAL DE BÚSQUEDA */
