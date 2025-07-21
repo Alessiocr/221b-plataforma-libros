@@ -7,16 +7,16 @@
 }
 
 html {
-    width: 1060px;
-    height: 1181px;
+    width: 100%;
+    max-width: 1060px;
     margin: 0 auto;
     overflow-x: hidden;
 }
 
 body {
     background-color: #fafafa;
-    width: 1060px;
-    height: 1181px;
+    width: 100%;
+    max-width: 1060px;
     margin: 0 auto;
     overflow-x: hidden;
     padding-bottom: 90px; /* Ajustado de 140px a 90px para la barra más pequeña */
@@ -31,10 +31,10 @@ body {
 
 /* HEADER SUPERIOR OSCURO - BAKER STREET */
 #dark-header {
-    background: #323232;
+    background: #3F2212;
     color: white;
     text-align: center;
-    padding: 15px 0; /* Aumentado de 8px a 15px */
+    padding: 15px 0; /* Aumentado de 8px a 15px */  
     font-weight: normal;
     position: fixed;
     top: 0;
@@ -46,7 +46,7 @@ body {
 
 #dark-header p {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -170,6 +170,11 @@ body {
     border: none;
     padding: 8px 10px; /* Padding más equilibrado */
     background: none;
+    transition: all 0.3s ease; /* Añadir transición */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none; /* Quitar outline por defecto */
 }
 
 .navbar-toggler-icon {
@@ -179,6 +184,7 @@ body {
     background-color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     position: relative;
     display: inline-block;
+    transition: all 0.3s ease; /* Añadir transición */
 }
 
 .navbar-toggler-icon::before,
@@ -500,7 +506,45 @@ body {
     }
     
     .hamburger-menu-container {
-        min-width: 60px;
+        min-width: 70px; /* Aumentado de 60px para más espacio */
+    }
+    
+    /* ICONOS HAMBURGUESA MÁS GRANDES EN MÓVIL */
+    .navbar-toggler {
+        padding: 12px; /* Más padding para mayor área de toque */
+        border-radius: 50%; /* Crear círculo */
+        background-color: rgba(85, 51, 6, 0.1); /* Círculo de fondo del mismo color */
+        border: 2px solid rgb(85, 51, 6); /* Borde del mismo color */
+    }
+    
+    .navbar-toggler:hover, .navbar-toggler:focus {
+        background-color: rgba(85, 51, 6, 0.2); /* Más intenso al hover */
+        border-color: rgb(85, 51, 6);
+        box-shadow: none; /* Quitar sombra por defecto de Bootstrap */
+    }
+    
+    .navbar-toggler-icon {
+        width: 28px; /* Aumentado de 32px para móvil */
+        height: 4px; /* Aumentado de 3px para mejor visibilidad */
+    }
+    
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        width: 28px; /* Mismo ancho que el principal */
+        height: 4px; /* Aumentado de 3px */
+    }
+    
+    .navbar-toggler-icon::before {
+        top: -10px; /* Aumentado de -8px para mejor espaciado */
+    }
+    
+    .navbar-toggler-icon::after {
+        bottom: -10px; /* Aumentado de -8px para mejor espaciado */
+    }
+    
+    .hamburger-text {
+        font-size: 16px !important; /* Aumentado de 14px para móvil */
+        margin-top: 5px; /* Más separación del icono */
     }
     
     .btn-bottom-nav, .btn-search {
@@ -636,7 +680,7 @@ body.inicio-page {
     padding: 40px 20px;
     margin: 5px 20px 20px 20px; /* Superior: 5px (igual que entre contenedores), otros mantienen 20px */
     border-radius: 8px;
-    min-height: 600px;
+    min-height: 900px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -655,7 +699,7 @@ body.inicio-page {
     border-radius: 8px;
     border: 1px solid #e8e8e8; /* Ligeramente más oscuro que #fafafa */
     transition: all 0.3s ease;
-    text-align: center;
+    text-align: left; /* Cambiado de center a left para el nuevo layout */
 }
 
 .content-section:hover {
@@ -677,16 +721,122 @@ body.inicio-page {
     line-height: 1.5;
 }
 
+/* ESTILOS PARA BOOK CARDS */
+.book-card {
+    display: flex;
+    gap: 20px; /* Separación entre imagen y contenido */
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.book-image-container {
+    flex: 0 0 20%; /* Ocupa exactamente el 20% del ancho */
+    max-width: 150px;
+}
+
+.book-placeholder-img {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    aspect-ratio: 3/4; /* Proporción típica de un libro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.book-placeholder-img:hover {
+    border-color: rgb(85, 51, 6);
+    background: #fff;
+}
+
+.book-placeholder-img i {
+    color: rgb(85, 51, 6);
+    margin-bottom: 10px;
+}
+
+.book-placeholder-img p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.book-info {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.book-title {
+    color: rgb(85, 51, 6);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.book-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.book-author {
+    color: #555;
+    font-size: 14px;
+    margin: 0;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.book-rating i {
+    color: #FFD700; /* Amarillo dorado para las estrellas */
+    font-size: 16px;
+}
+
+.rating-text {
+    margin-left: 8px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-quiero {
+    background: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* No ocupa todo el ancho */
+}
+
+.btn-quiero:hover {
+    background: #218838; /* Verde más oscuro */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
 /* RESPONSIVE PARA PÁGINA DE INICIO */
 @media (max-width: 768px) {
     body.inicio-page {
-        padding-top: 100px; /* Ajustado para ambos headers más altos en móvil */
-        width: 100% !important;
-        max-width: 100%;
+        padding-top: 85px; /* Reducido de 100px para compensar la barra más baja */
     }
     
     #nav-header {
-        padding: 4px 0; /* Padding reducido consistente con desktop */
+        padding: 2px 0; /* Reducido de 4px a 2px para barra más baja */
         width: 100%;
     }
     
@@ -702,16 +852,16 @@ body.inicio-page {
         flex: 1;
         max-width: 90px; /* Reducido de 120px a 90px para 4 botones */
         text-align: center;
-        padding: 14px 6px !important; /* Padding ajustado para mejor ajuste */
-        font-size: 16px !important; /* Aumentado de 14px a 16px para mejor legibilidad */
+        padding: 10px 6px !important; /* Reducido de 14px a 10px para barra más baja */
+        font-size: 15px !important; /* Reducido de 16px a 15px */
         margin: 0; /* Sin margen */
         white-space: nowrap; /* No permitir salto de línea */
     }
     
     /* CONTENIDO PRINCIPAL EN MÓVIL */
     #main-content-container {
-        padding: 20px 15px; /* Más padding lateral */
-        margin-top: 20px;
+        margin: 5px 10px 10px 10px;
+        padding: 20px 15px;
     }
     
     .main-content-area {
@@ -719,7 +869,7 @@ body.inicio-page {
     }
     
     .content-section {
-        padding: 25px 20px; /* Más padding interno */
+        padding: 20px 15px;
         margin: 10px 0; /* Más separación vertical */
     }
     
@@ -732,24 +882,42 @@ body.inicio-page {
         font-size: 16px; /* Texto más legible */
         line-height: 1.6; /* Mayor espacio entre líneas */
     }
-    }
     
-    #main-content-container {
-        margin: 5px 10px 10px 10px; /* Ajustado para móvil manteniendo margen superior pequeño */
+    /* RESPONSIVE PARA BOOK CARDS */
+    .book-card {
+        flex-direction: column; /* Cambiar a columna en móvil */
+        gap: 15px;
         padding: 20px 15px;
     }
     
-    .content-section {
-        padding: 20px 15px;
+    .book-image-container {
+        flex: none; /* Quitar flexbox en móvil */
+        max-width: 120px; /* Reducir tamaño en móvil */
+        align-self: center; /* Centrar imagen */
     }
     
-    .content-section h3 {
-        font-size: 22px; /* Títulos más grandes */
-        margin-bottom: 12px;
+    .book-placeholder-img {
+        padding: 15px;
     }
     
-    .content-section p {
-        font-size: 16px; /* Texto más legible */
-        line-height: 1.6; /* Mayor espacio entre líneas */
+    .book-info {
+        text-align: center; /* Centrar información en móvil */
+    }
+    
+    .book-title {
+        font-size: 18px;
+    }
+    
+    .book-description {
+        font-size: 14px;
+    }
+    
+    .book-rating {
+        justify-content: center; /* Centrar rating en móvil */
+    }
+    
+    .btn-quiero {
+        align-self: center; /* Centrar botón en móvil */
+        padding: 12px 24px; /* Botón más grande para mejor toque */
     }
 }
