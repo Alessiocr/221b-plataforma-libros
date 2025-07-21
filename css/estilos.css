@@ -185,9 +185,11 @@ body {
 
 /* MENÚ DESPLEGABLE ELEGANTE */
 .elegant-dropdown-menu {
-    position: absolute;
-    bottom: 100%;
-    right: 0;
+    position: fixed; /* Cambiado a fixed para mejor control */
+    bottom: 90px; /* Posicionado justo encima de la barra (altura 90px) */
+    /* Centrado respecto a la pantalla con los mismos márgenes que el contenedor */
+    left: 50%;
+    transform: translateX(-50%);
     background: rgb(245, 245, 220); /* Beige claro */
     border: 2px solid #ddd;
     border-radius: 15px;
@@ -195,12 +197,10 @@ body {
     z-index: 1000;
     margin-bottom: 10px;
     padding: 40px; /* Aumentado para más contenido */
-    /* Tamaño expandido para abarcar el ancho del contenedor central */
+    /* Tamaño que respeta exactamente los márgenes del contenedor central */
     width: 1020px; /* Ancho del contenedor central (1060px - 40px padding) */
-    min-height: 300px; /* 50% más alto que antes (200px + 50% = 300px) */
-    /* Centrar el menú respecto al contenedor */
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: calc(100vw - 40px); /* Respeta márgenes en pantallas pequeñas */
+    min-height: 300px; /* 50% más alto que antes */
 }
 
 .menu-grid {
