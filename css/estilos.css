@@ -199,7 +199,7 @@ body {
 }
 
 .hamburger-text {
-    font-size: 20px; /* Reducido de 34px a 20px - coincide con botones */
+    font-size: 18px; /* Reducido a 18px para coincidir mejor con otros botones */
     color: #323232;
     font-weight: normal; /* Eliminada la negrita */
     margin-top: 3px; /* Ajustado el margen */
@@ -226,10 +226,29 @@ body {
 }
 
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas para aprovechar el ancho amplio */
-    gap: 30px; /* Gap más amplio para mejor distribución */
-    align-items: start;
+    display: flex;
+    flex-direction: column; /* Cambio a columna para las filas */
+    gap: 20px; /* Espacio entre filas */
+    align-items: center;
+}
+
+/* Filas de menú */
+.menu-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Gap entre elementos de la misma fila */
+    width: 100%;
+}
+
+/* Placeholders para botones futuros */
+.menu-placeholder {
+    pointer-events: none; /* No interactuable */
+    opacity: 0.4; /* Más transparente */
+}
+
+.menu-placeholder .icon-circle {
+    border: 2px dashed rgba(50, 50, 50, 0.2); /* Borde punteado */
+    background: transparent;
 }
 
 .menu-item {
@@ -276,7 +295,7 @@ body {
 }
 
 .menu-text {
-    font-size: 28px; /* Aumentado de 26px a 28px para mejor legibilidad */
+    font-size: 32px; /* Aumentado de 28px a 32px para mejor legibilidad */
     font-weight: normal; /* Eliminada la negrita */
     color: #323232; /* Cambiado a gris oscuro */
     text-align: center;
@@ -492,12 +511,30 @@ body {
     }
     
     .menu-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas en móvil */
-        gap: 20px;
+        gap: 15px; /* Reducido para móvil */
+    }
+    
+    .menu-row {
+        gap: 15px; /* Reducido para móvil */
+        flex-wrap: wrap; /* Permite wrap si es necesario */
     }
     
     .menu-item {
         padding: 15px 5px;
+        min-height: 140px; /* Reducido para móvil */
+    }
+    
+    .icon-circle {
+        width: 60px; /* Más pequeño en móvil */
+        height: 60px;
+    }
+    
+    .icon-circle i {
+        font-size: 24px; /* Más pequeño en móvil */
+    }
+    
+    .menu-text {
+        font-size: 18px; /* Más pequeño en móvil */
     }
     
     .icon-circle {
@@ -639,17 +676,17 @@ body.inicio-page {
     
     .nav-buttons {
         justify-content: space-around; /* Distribución uniforme */
-        gap: 8px; /* Espacio mínimo entre botones */
+        gap: 4px; /* Reducido de 8px a 4px para más espacio */
         flex-wrap: wrap;
     }
     
     .nav-btn {
         flex: 1;
-        min-width: calc(25% - 6px); /* 4 botones por fila con espacio */
+        min-width: calc(25% - 4px); /* Ajustado para gap más pequeño */
         text-align: center;
-        padding: 12px 8px !important; /* Más padding para mejor toque */
-        font-size: 16px !important; /* Texto más grande y legible */
-        margin: 2px; /* Margen mínimo */
+        padding: 12px 6px !important; /* Reducido padding lateral */
+        font-size: 15px !important; /* Ligeramente más pequeño */
+        margin: 1px; /* Margen mínimo */
     }
     
     /* CONTENIDO PRINCIPAL EN MÓVIL */
