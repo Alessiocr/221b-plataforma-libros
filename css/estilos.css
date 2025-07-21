@@ -42,6 +42,7 @@ body {
     width: 100vw;
     z-index: 999;
     margin: 0;
+    margin-bottom: 0; /* Sin margen inferior para eliminar espacio */
 }
 
 #dark-header p {
@@ -58,6 +59,7 @@ body {
     padding: 15px 0;
     font-weight: normal; /* Eliminada la negrita */
     border-bottom: 2px solid #ddd;
+    margin-top: 0; /* Sin margen superior para eliminar espacio */
 }
 
 #top-header h1 {
@@ -199,7 +201,7 @@ body {
 }
 
 .hamburger-text {
-    font-size: 18px; /* Reducido a 18px para coincidir mejor con otros botones */
+    font-size: 14px; /* Reducido a 14px para coincidir mejor con otros botones */
     color: #323232;
     font-weight: normal; /* Eliminada la negrita */
     margin-top: 3px; /* Ajustado el margen */
@@ -218,7 +220,7 @@ body {
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
     z-index: 1000;
     margin-bottom: 10px;
-    padding: 40px; /* Aumentado para más contenido */
+    padding: 30px 15px; /* Reducido padding lateral para eliminar espacios vacíos */
     /* Tamaño que coincide con el header (ancho completo disponible) */
     width: 1060px; /* Ancho completo como el header */
     max-width: calc(100vw - 20px); /* Margen mínimo de 10px a cada lado en móviles */
@@ -676,16 +678,16 @@ body.inicio-page {
     
     .nav-buttons {
         justify-content: space-around; /* Distribución uniforme */
-        gap: 4px; /* Reducido de 8px a 4px para más espacio */
+        gap: 6px; /* Aumentado ligeramente para 3 botones */
         flex-wrap: wrap;
     }
     
     .nav-btn {
         flex: 1;
-        min-width: calc(25% - 4px); /* Ajustado para gap más pequeño */
+        min-width: calc(33.33% - 4px); /* Ajustado para 3 botones por fila */
         text-align: center;
-        padding: 12px 6px !important; /* Reducido padding lateral */
-        font-size: 15px !important; /* Ligeramente más pequeño */
+        padding: 12px 8px !important; /* Más padding ahora que hay solo 3 botones */
+        font-size: 16px !important; /* Ligeramente más grande para mejor legibilidad */
         margin: 1px; /* Margen mínimo */
     }
     
