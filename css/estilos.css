@@ -14,12 +14,13 @@ html {
 }
 
 body {
-    background-color: lightgrey;
+    background-color: #fafafa;
     width: 1060px;
     height: 1181px;
     margin: 0 auto;
     overflow-x: hidden;
     padding-bottom: 90px; /* Ajustado de 140px a 90px para la barra más pequeña */
+    padding-top: 50px; /* Espacio para el header fijo oscuro */
 }
 
 /* CONTAINER PRINCIPAL */
@@ -28,9 +29,30 @@ body {
     min-height: calc(100vh - 90px); /* Ajustado para la nueva altura de barra */
 }
 
-/* HEADER SUPERIOR AMARILLO */
+/* HEADER SUPERIOR OSCURO - BAKER STREET */
+#dark-header {
+    background: #323232;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: normal;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+    margin: 0;
+}
+
+#dark-header p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* HEADER SUPERIOR BEIGE */
 #top-header {
-    background: yellow;
+    background: #DDD0C8;
     color: black;
     text-align: center;
     padding: 15px 0;
@@ -106,7 +128,7 @@ body {
 
 /* BARRA DE NAVEGACIÓN INFERIOR FIJA */
 .bottom-navbar {
-    background: lightyellow;
+    background: #fafafa;
     border-top: 2px solid #ddd;
     padding: 0;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
@@ -140,7 +162,7 @@ body {
 }
 
 .hamburger-menu-container:hover {
-    background: rgba(85, 51, 6, 0.1);
+    background: rgba(50, 50, 50, 0.1);
 }
 
 .navbar-toggler {
@@ -153,7 +175,7 @@ body {
     background-image: none;
     width: 28px; /* Reducido de 40px a 28px */
     height: 3px; /* Reducido de 4px a 3px */
-    background-color: rgb(85, 51, 6);
+    background-color: #323232;
     position: relative;
     display: inline-block;
 }
@@ -164,7 +186,7 @@ body {
     position: absolute;
     width: 28px; /* Reducido de 40px a 28px */
     height: 3px; /* Reducido de 4px a 3px */
-    background-color: rgb(85, 51, 6);
+    background-color: #323232;
     transition: all 0.3s ease;
 }
 
@@ -178,7 +200,7 @@ body {
 
 .hamburger-text {
     font-size: 20px; /* Reducido de 34px a 20px - coincide con botones */
-    color: rgb(85, 51, 6);
+    color: #323232;
     font-weight: normal; /* Eliminada la negrita */
     margin-top: 3px; /* Ajustado el margen */
 }
@@ -190,7 +212,7 @@ body {
     /* Centrado respecto a la pantalla con el mismo ancho que el header */
     left: 50%;
     transform: translateX(-50%);
-    background: rgb(245, 245, 220); /* Beige claro */
+    background: #fafafa; /* Cambiado de beige claro a #fafafa */
     border: 2px solid #ddd;
     border-radius: 15px;
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
@@ -218,51 +240,51 @@ body {
     padding: 30px 20px; /* Aumentado para mejor uso del espacio amplio */
     border-radius: 12px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(85, 51, 6, 0.1);
+    background: #fafafa; /* Cambiado a #fafafa */
+    border: 1px solid rgba(50, 50, 50, 0.1); /* Cambiado a gris oscuro con transparencia */
     min-height: 180px; /* Altura mínima para consistencia */
 }
 
 .menu-item:hover {
     background: rgba(255, 255, 255, 0.8);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(85, 51, 6, 0.2);
+    box-shadow: 0 4px 12px rgba(50, 50, 50, 0.2); /* Cambiado a gris oscuro */
 }
 
 .icon-circle {
     width: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
     height: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
     border-radius: 50%;
-    background: rgba(85, 51, 6, 0.1);
+    background: #fafafa; /* Cambiado a #fafafa */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px; /* Mantenido el espaciado */
     transition: all 0.3s ease;
-    border: 2px solid rgba(85, 51, 6, 0.2);
+    border: 2px solid rgba(50, 50, 50, 0.2); /* Cambiado a gris oscuro */
 }
 
 .menu-item:hover .icon-circle {
-    background: rgba(85, 51, 6, 0.2);
-    border-color: rgba(85, 51, 6, 0.4);
+    background: rgba(50, 50, 50, 0.1); /* Cambiado a gris oscuro con transparencia */
+    border-color: rgba(50, 50, 50, 0.4); /* Cambiado a gris oscuro */
     transform: scale(1.05);
 }
 
 .icon-circle i {
     font-size: 40px; /* Aumentado de 36px a 40px para círculos más grandes */
-    color: rgb(85, 51, 6);
+    color: #323232;
 }
 
 .menu-text {
     font-size: 28px; /* Aumentado de 26px a 28px para mejor legibilidad */
     font-weight: normal; /* Eliminada la negrita */
-    color: rgb(85, 51, 6);
+    color: #323232; /* Cambiado a gris oscuro */
     text-align: center;
     margin-top: 6px; /* Aumentado ligeramente el margen */
 }
 
 .menu-item:hover .menu-text {
-    color: rgb(65, 35, 0);
+    color: #1a1a1a; /* Cambiado a un gris aún más oscuro para el hover */
 }
 
 /* BOTONES PRINCIPALES INFERIORES */
@@ -276,7 +298,7 @@ body {
 
 .btn-bottom-nav {
     background: transparent;
-    color: rgb(85, 51, 6);
+    color: #323232;
     border: none;
     padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
     text-decoration: none;
@@ -293,13 +315,13 @@ body {
 }
 
 .btn-bottom-nav:hover, .btn-bottom-nav.active {
-    background: rgba(85, 51, 6, 0.1);
-    color: rgb(85, 51, 6);
+    background: rgba(50, 50, 50, 0.1);
+    color: #323232;
 }
 
 .btn-bottom-nav.active {
-    background: rgba(85, 51, 6, 0.15);
-    color: rgb(85, 51, 6);
+    background: rgba(50, 50, 50, 0.15);
+    color: #323232;
     font-weight: normal; /* Eliminada la negrita */
 }
 
@@ -322,7 +344,7 @@ body {
 
 .btn-search {
     background: transparent;
-    color: rgb(85, 51, 6);
+    color: #323232;
     border: none;
     padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
     font-weight: normal; /* Eliminada la negrita */
@@ -338,8 +360,8 @@ body {
 }
 
 .btn-search:hover {
-    background: rgba(85, 51, 6, 0.1);
-    color: rgb(85, 51, 6);
+    background: rgba(50, 50, 50, 0.1);
+    color: #323232;
 }
 
 .btn-search i {
@@ -386,6 +408,15 @@ body {
         height: auto;
         margin: 0;
         padding-bottom: 60px;
+        padding-top: 50px; /* Espacio para el header fijo oscuro en móvil */
+    }
+    
+    #dark-header {
+        padding: 12px 0; /* Padding ligeramente reducido en móvil */
+    }
+    
+    #dark-header p {
+        font-size: 14px; /* Texto ligeramente más pequeño en móvil */
     }
     
     .bottom-navbar {
@@ -461,5 +492,154 @@ body {
     .menu-text {
         font-size: 11px;
         line-height: 1.2;
+    }
+}
+
+/* ========================================
+   ESTILOS PARA PÁGINA DE INICIO
+   ======================================== */
+
+/* BODY ESPECÍFICO PARA PÁGINA DE INICIO */
+body.inicio-page {
+    padding-top: 90px; /* Espacio para ambos headers fijos (50px + 40px) */
+}
+
+/* HEADER DE NAVEGACIÓN */
+#nav-header {
+    background: #DDD0C8;
+    color: black;
+    text-align: center;
+    padding: 10px 0; /* Reducido de 15px a 10px */
+    font-weight: normal;
+    border-bottom: 2px solid #ddd;
+    position: fixed;
+    top: 50px; /* Justo debajo del header oscuro */
+    left: 0;
+    width: 100vw;
+    z-index: 998; /* Un poco menos que el header oscuro */
+    margin: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-btn {
+    background: transparent;
+    color: #323232;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background: rgba(50, 50, 50, 0.1);
+    color: #323232;
+}
+
+/* Botón de registro destacado */
+.nav-btn-highlight {
+    background: #FFD700 !important; /* Amarillo dorado */
+    color: #323232 !important; /* Texto gris oscuro para contraste */
+    font-weight: 500 !important; /* Ligeramente más grueso */
+}
+
+.nav-btn-highlight:hover {
+    background: #FFC107 !important; /* Amarillo ligeramente más oscuro al hover */
+    color: #323232 !important;
+    transform: translateY(-1px); /* Ligero efecto de elevación */
+}
+
+/* CONTENEDOR PRINCIPAL DE INICIO */
+#main-content-container {
+    background: #fafafa;
+    padding: 40px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    min-height: 600px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-content-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* SECCIONES DE CONTENIDO */
+.content-section {
+    background: #fafafa;
+    padding: 30px 25px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8; /* Ligeramente más oscuro que #fafafa */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.content-section:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.content-section h3 {
+    color: #323232;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.content-section p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE PARA PÁGINA DE INICIO */
+@media (max-width: 768px) {
+    body.inicio-page {
+        padding-top: 85px; /* Ajustado para ambos headers en móvil (50px + 35px) */
+    }
+    
+    #nav-header {
+        padding: 8px 0; /* Altura reducida en móvil */
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px; /* Reducido para móvil */
+    }
+    
+    .nav-btn {
+        width: 80%;
+        text-align: center;
+        padding: 8px 16px; /* Padding reducido en móvil */
+        font-size: 14px; /* Texto más pequeño en móvil */
+    }
+    
+    #main-content-container {
+        margin: 10px;
+        padding: 20px 15px;
+    }
+    
+    .content-section {
+        padding: 20px 15px;
+    }
+    
+    .content-section h3 {
+        font-size: 20px;
+    }
+    
+    .content-section p {
+        font-size: 14px;
     }
 }
