@@ -20,7 +20,7 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
     padding-bottom: 90px; /* Ajustado de 140px a 90px para la barra más pequeña */
-    padding-top: 50px; /* Espacio para el header fijo oscuro */
+    padding-top: 45px; /* Reducido para pegar mejor con el dark-header */
 }
 
 /* CONTAINER PRINCIPAL */
@@ -42,7 +42,6 @@ body {
     width: 100vw;
     z-index: 999;
     margin: 0;
-    margin-bottom: 0; /* Sin margen inferior para eliminar espacio */
 }
 
 #dark-header p {
@@ -58,8 +57,8 @@ body {
     text-align: center;
     padding: 15px 0;
     font-weight: normal; /* Eliminada la negrita */
-    border-bottom: 2px solid #ddd;
-    margin-top: 0; /* Sin margen superior para eliminar espacio */
+    border-bottom: none; /* Eliminado el borde para pegar con contenido */
+    margin: 0; /* Sin márgenes */
 }
 
 #top-header h1 {
@@ -72,10 +71,10 @@ body {
 #content-container {
     background: #ffffff;
     padding: 40px 20px;
-    margin: 20px;
-    border-radius: 8px;
+    margin: 0; /* Eliminado el margen para pegar con header */
+    border-radius: 0; /* Eliminado border-radius para pegar completamente */
     min-height: 600px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: none; /* Eliminada la sombra para integración total */
 }
 
 .content-area {
@@ -214,13 +213,13 @@ body {
     /* Centrado respecto a la pantalla con el mismo ancho que el header */
     left: 50%;
     transform: translateX(-50%);
-    background: #fafafa; /* Cambiado de beige claro a #fafafa */
-    border: 2px solid #ddd;
+    background: #f8f9fa; /* Mismo color gris claro que los cuadros de libros */
+    border: 1px solid #e8e8e8; /* Mismo borde que los content-section */
     border-radius: 15px;
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
     z-index: 1000;
     margin-bottom: 10px;
-    padding: 30px 15px; /* Reducido padding lateral para eliminar espacios vacíos */
+    padding: 20px 0; /* Sin padding lateral - solo vertical */
     /* Tamaño que coincide con el header (ancho completo disponible) */
     width: 1060px; /* Ancho completo como el header */
     max-width: calc(100vw - 20px); /* Margen mínimo de 10px a cada lado en móviles */
@@ -237,9 +236,10 @@ body {
 /* Filas de menú */
 .menu-row {
     display: flex;
-    justify-content: center;
-    gap: 30px; /* Gap entre elementos de la misma fila */
+    justify-content: space-evenly; /* Distribución uniforme para llenar todo el ancho */
+    gap: 10px; /* Gap reducido */
     width: 100%;
+    padding: 0 20px; /* Solo un poco de padding interno */
 }
 
 /* Placeholders para botones futuros */
@@ -261,33 +261,33 @@ body {
     padding: 30px 20px; /* Aumentado para mejor uso del espacio amplio */
     border-radius: 12px;
     transition: all 0.3s ease;
-    background: #fafafa; /* Cambiado a #fafafa */
-    border: 1px solid rgba(50, 50, 50, 0.1); /* Cambiado a gris oscuro con transparencia */
+    background: #f8f9fa; /* Mismo color gris claro que los cuadros de libros */
+    border: none; /* Sin borde para consistencia */
     min-height: 180px; /* Altura mínima para consistencia */
 }
 
 .menu-item:hover {
-    background: rgba(255, 255, 255, 0.8);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(50, 50, 50, 0.2); /* Cambiado a gris oscuro */
+    background: #fff; /* Mismo hover que los book-placeholder */
+    transform: translateY(-2px); /* Mismo efecto de elevación que content-section */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Misma sombra que content-section */
 }
 
 .icon-circle {
     width: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
     height: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
     border-radius: 50%;
-    background: #fafafa; /* Cambiado a #fafafa */
+    background: #f8f9fa; /* Mismo color gris claro que los cuadros de libros */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px; /* Mantenido el espaciado */
     transition: all 0.3s ease;
-    border: 2px solid rgba(50, 50, 50, 0.2); /* Cambiado a gris oscuro */
+    border: 2px solid rgba(50, 50, 50, 0.2); /* Devuelto el borde estético */
 }
 
 .menu-item:hover .icon-circle {
     background: rgba(50, 50, 50, 0.1); /* Cambiado a gris oscuro con transparencia */
-    border-color: rgba(50, 50, 50, 0.4); /* Cambiado a gris oscuro */
+    border-color: rgba(50, 50, 50, 0.4); /* Devuelto el borde hover */
     transform: scale(1.05);
 }
 
@@ -504,12 +504,18 @@ body {
         /* En móvil: aprovecha casi todo el ancho de la pantalla */
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100vw - 10px); /* Solo 5px de margen a cada lado */
-        max-width: calc(100vw - 10px);
+        width: calc(100vw - 4px); /* Solo 2px de margen a cada lado - máximo ancho */
+        max-width: calc(100vw - 4px);
         min-width: auto;
         margin-left: 0;
         margin-right: 0;
-        padding: 20px; /* Padding reducido en móvil */
+        padding: 15px 0; /* Solo padding vertical en móvil */
+    }
+    
+    .menu-row {
+        padding: 0 10px; /* Padding mínimo en móvil */
+        gap: 5px; /* Gap mínimo en móvil */
+        justify-content: space-evenly; /* Distribución uniforme */
     }
     
     .menu-grid {
@@ -677,18 +683,21 @@ body.inicio-page {
     }
     
     .nav-buttons {
-        justify-content: space-around; /* Distribución uniforme */
-        gap: 6px; /* Aumentado ligeramente para 3 botones */
-        flex-wrap: wrap;
+        justify-content: center; /* Centrado para 3 botones */
+        gap: 12px; /* Más espacio entre botones */
+        flex-wrap: nowrap; /* No permitir wrap */
+        width: 100%;
+        max-width: 100%;
     }
     
     .nav-btn {
         flex: 1;
-        min-width: calc(33.33% - 4px); /* Ajustado para 3 botones por fila */
+        max-width: 120px; /* Ancho máximo fijo para cada botón */
         text-align: center;
-        padding: 12px 8px !important; /* Más padding ahora que hay solo 3 botones */
-        font-size: 16px !important; /* Ligeramente más grande para mejor legibilidad */
-        margin: 1px; /* Margen mínimo */
+        padding: 12px 8px !important; /* Padding uniforme */
+        font-size: 14px !important; /* Tamaño reducido para mejor ajuste */
+        margin: 0; /* Sin margen */
+        white-space: nowrap; /* No permitir salto de línea */
     }
     
     /* CONTENIDO PRINCIPAL EN MÓVIL */
