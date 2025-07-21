@@ -177,7 +177,7 @@ body {
 }
 
 .hamburger-text {
-    font-size: 13px; /* Aumentado de 10px a 13px */
+    font-size: 17px; /* Aumentado de 13px a 17px para coincidir con los botones */
     color: rgb(85, 51, 6);
     font-weight: normal; /* Eliminada la negrita */
     margin-top: 2px;
@@ -194,19 +194,16 @@ body {
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
     z-index: 1000;
     margin-bottom: 10px;
-    padding: 40px; /* Aumentado de 30px a 40px para más espacio */
-    /* Tamaño aumentado para coincidir con el contenedor central */
-    min-width: 1000px; /* Aumentado significativamente para coincidir con el contenedor central */
-    max-width: 1040px; /* Similar al contenedor central de 1060px */
-    /* Centrar el menú */
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 30px; /* Restaurado a un tamaño más manejable */
+    /* Tamaño restaurado a dimensiones originales mejoradas */
+    min-width: 400px; /* Restaurado a tamaño original mejorado */
+    max-width: 480px; /* Restaurado a tamaño original mejorado */
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cambiado a 4 columnas para mejor distribución con el ancho amplio */
-    gap: 30px; /* Aumentado de 20px a 30px para más espacio */
+    grid-template-columns: repeat(2, 1fr); /* Restaurado a 2 columnas como estaba originalmente */
+    gap: 20px; /* Restaurado a un gap más manejable */
 }
 
 .menu-item {
@@ -214,7 +211,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    padding: 25px 20px; /* Aumentado de 20px 15px a 25px 20px para más espacio */
+    padding: 20px 15px; /* Restaurado al tamaño original mejorado */
     border-radius: 12px;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.3);
@@ -228,14 +225,14 @@ body {
 }
 
 .icon-circle {
-    width: 90px; /* Aumentado de 70px a 90px para iconos más grandes */
-    height: 90px; /* Aumentado de 70px a 90px para iconos más grandes */
+    width: 70px; /* Restaurado a tamaño original mejorado */
+    height: 70px; /* Restaurado a tamaño original mejorado */
     border-radius: 50%;
     background: rgba(85, 51, 6, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px; /* Aumentado de 12px a 15px */
+    margin-bottom: 12px; /* Restaurado a margen original mejorado */
     transition: all 0.3s ease;
     border: 2px solid rgba(85, 51, 6, 0.2);
 }
@@ -247,12 +244,12 @@ body {
 }
 
 .icon-circle i {
-    font-size: 44px; /* DUPLICADO: de 22px a 44px (x2 respecto a botones actualizados) */
+    font-size: 36px; /* Restaurado a tamaño proporcional con el menú */
     color: rgb(85, 51, 6);
 }
 
 .menu-text {
-    font-size: 30px; /* DUPLICADO: de 15px a 30px (x2 respecto a botones actualizados) */
+    font-size: 26px; /* Restaurado a tamaño proporcional con el menú */
     font-weight: normal; /* Eliminada la negrita */
     color: rgb(85, 51, 6);
     text-align: center;
@@ -302,12 +299,12 @@ body {
 }
 
 .btn-bottom-nav i {
-    font-size: 22px; /* Aumentado de 18px a 22px */
-    margin-bottom: 3px; /* Aumentado ligeramente el margen */
+    font-size: 26px; /* Aumentado de 22px a 26px */
+    margin-bottom: 4px; /* Aumentado ligeramente el margen */
 }
 
 .btn-bottom-nav span {
-    font-size: 15px; /* Aumentado de 13px a 15px */
+    font-size: 17px; /* Aumentado de 15px a 17px */
 }
 
 /* BOTÓN DE BÚSQUEDA */
@@ -341,12 +338,12 @@ body {
 }
 
 .btn-search i {
-    font-size: 22px; /* Aumentado de 18px a 22px */
-    margin-bottom: 3px; /* Aumentado ligeramente el margen */
+    font-size: 26px; /* Aumentado de 22px a 26px */
+    margin-bottom: 4px; /* Aumentado ligeramente el margen */
 }
 
 .btn-search span {
-    font-size: 15px; /* Aumentado de 13px a 15px */
+    font-size: 17px; /* Aumentado de 15px a 17px */
 }
 
 /* MODAL DE BÚSQUEDA */
