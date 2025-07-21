@@ -1,3 +1,7 @@
+/* ========================================
+   CSS LIMPIO - SOLO ESTILOS NECESARIOS
+   ======================================== */
+
 /* ESTILOS GENERALES */
 * {
     margin: 0;
@@ -6,42 +10,36 @@
     font-family: Lato, sans-serif;
 }
 
-html {
+html, body {
     width: 100%;
     max-width: 1060px;
     margin: 0 auto;
-    overflow-x: hidden;
-}
-
-body {
     background-color: #fafafa;
-    width: 100%;
-    max-width: 1060px;
-    margin: 0 auto;
     overflow-x: hidden;
-    padding-bottom: 90px; /* Ajustado de 140px a 90px para la barra más pequeña */
-    padding-top: 50px; /* Aumentado de 35px a 50px para compensar header más alto */
+    padding-bottom: 90px;
+    padding-top: 50px;
 }
 
-/* CONTAINER PRINCIPAL */
 #container {
     width: 100%;
-    min-height: calc(100vh - 90px); /* Ajustado para la nueva altura de barra */
+    min-height: calc(100vh - 90px);
 }
 
-/* HEADER SUPERIOR OSCURO - BAKER STREET */
+/* ========================================
+   HEADERS
+   ======================================== */
+
+/* Header oscuro Baker Street */
 #dark-header {
     background: #3F2212;
     color: white;
     text-align: center;
-    padding: 15px 0; /* Aumentado de 8px a 15px */  
-    font-weight: normal;
+    padding: 15px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     z-index: 999;
-    margin: 0;
 }
 
 #dark-header p {
@@ -50,31 +48,66 @@ body {
     font-weight: normal;
 }
 
-/* HEADER SUPERIOR BEIGE */
-#top-header {
-    background: #DDD0C8;
+/* Header de navegación (solo para inicio.html) */
+#nav-header {
+    background: #faf8f6;
     color: black;
     text-align: center;
-    padding: 15px 0;
-    font-weight: normal; /* Eliminada la negrita */
-    border-bottom: none; /* Eliminado el borde para pegar con contenido */
-    margin: 0; /* Sin márgenes */
+    padding: 6px 0;
+    border-bottom: 2px solid #ddd;
+    position: fixed;
+    top: 47px;
+    left: 0;
+    width: 100vw;
+    z-index: 998;
 }
 
-#top-header h1 {
-    margin: 0;
-    font-size: 30px;
-    font-weight: normal; /* Eliminada la negrita */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
 }
 
-/* CONTENEDOR DE CONTENIDO */
+.nav-btn {
+    background: transparent;
+    color: #323232;
+    border: none;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    background: rgba(50, 50, 50, 0.1);
+    color: #323232;
+}
+
+.nav-btn-highlight {
+    background: #FFD700 !important;
+    color: #323232 !important;
+    font-weight: 500 !important;
+}
+
+.nav-btn-highlight:hover {
+    background: #FFC107 !important;
+    color: #323232 !important;
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   CONTENEDORES DE CONTENIDO
+   ======================================== */
+
+/* Contenedor para index.html */
 #content-container {
     background: #ffffff;
     padding: 40px 20px;
-    margin: 0; /* Eliminado el margen para pegar con header */
-    border-radius: 0; /* Eliminado border-radius para pegar completamente */
+    margin: 0;
     min-height: 600px;
-    box-shadow: none; /* Eliminada la sombra para integración total */
 }
 
 .content-area {
@@ -94,7 +127,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* GRID DE LIBROS PLACEHOLDER */
+/* Grid de libros placeholder para index.html */
 .books-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -124,17 +157,283 @@ body {
 .book-placeholder p {
     color: #666;
     margin: 0;
-    font-weight: normal; /* Eliminada la negrita */
+    font-weight: normal;
 }
 
-/* BARRA DE NAVEGACIÓN INFERIOR FIJA */
+/* Contenedor principal para inicio.html */
+#main-content-container {
+    background: #faf8f6;
+    padding: 40px 20px;
+    margin: 5px 20px 20px 20px;
+    border-radius: 8px;
+    min-height: 900px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-content-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Secciones de contenido generales */
+.content-section {
+    background: #fafafa;
+    padding: 30px 25px;
+    margin: 2px 0;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.content-section:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.content-section h3 {
+    color: #323232;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.content-section p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ========================================
+   SECCIÓN DE INTRODUCCIÓN COLAPSABLE
+   ======================================== */
+
+.intro-section {
+    background: linear-gradient(135deg, #f5f2ed 0%, #e8ddd4 100%);
+    border: 2px solid #d4c4b0;
+    margin: 5px 0 15px 0;
+}
+
+.intro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+.intro-header h3 {
+    color: rgb(85, 51, 6);
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.intro-header h3 i {
+    color: rgb(85, 51, 6);
+}
+
+.collapse-icon {
+    color: rgb(85, 51, 6);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.intro-header[aria-expanded="false"] .collapse-icon {
+    transform: rotate(-90deg);
+}
+
+.intro-header:hover {
+    background: rgba(85, 51, 6, 0.05);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: -8px -12px;
+}
+
+.intro-content {
+    padding-top: 20px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.intro-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.intro-content ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.intro-content li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.intro-content strong {
+    color: rgb(85, 51, 6);
+    font-weight: 600;
+}
+
+.intro-content em {
+    color: rgb(85, 51, 6);
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ========================================
+   BOOK CARDS
+   ======================================== */
+
+.book-card {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 20px;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.book-popularity {
+    color: #000;
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.book-content {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.book-image-container {
+    flex: 0 0 20%;
+    max-width: 120px;
+}
+
+.book-placeholder-img {
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.book-placeholder-img:hover {
+    border-color: rgb(85, 51, 6);
+    background: #fff;
+}
+
+.book-placeholder-img i {
+    color: rgb(85, 51, 6);
+    margin-bottom: 8px;
+    font-size: 2rem !important;
+}
+
+.book-placeholder-img p {
+    font-size: 10px;
+    color: #888;
+    margin: 0;
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.book-title {
+    color: #2F4F2F !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.book-description {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-author {
+    color: #555;
+    font-size: 13px;
+    margin: 0;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.book-rating i {
+    color: #FFD700;
+    font-size: 14px;
+}
+
+.rating-text {
+    margin-left: 6px;
+    color: #666;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.btn-quiero {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-quiero:hover {
+    background: #218838;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* ========================================
+   BARRA DE NAVEGACIÓN INFERIOR
+   ======================================== */
+
 .bottom-navbar {
     background: #fafafa;
     border-top: 2px solid #ddd;
     padding: 0;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
-    height: 90px; /* Reducido de 140px a 90px - más equilibrado */
+    height: 90px;
 }
 
 .bottom-nav-content {
@@ -145,185 +444,24 @@ body {
     margin: 0 auto;
     padding: 0;
     height: 100%;
-    gap: 0; /* Sin espacios entre elementos */
+    gap: 0;
 }
 
-/* MENÚ HAMBURGUESA EN BARRA INFERIOR */
-.hamburger-menu-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex: 1; /* Toma 1 parte del espacio disponible, igual que búsqueda */
-    background: transparent;
-    transition: background 0.3s ease;
-    min-width: 0; /* Permite que se comprima uniformemente */
-}
-
-.hamburger-menu-container:hover {
-    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
-}
-
-.navbar-toggler {
-    border: none;
-    padding: 8px 10px; /* Padding más equilibrado */
-    background: none;
-}
-
-.navbar-toggler-icon {
-    background-image: none;
-    width: 32px; /* Tamaño similar a los iconos de otros botones */
-    height: 3px; /* Reducido de 4px a 3px */
-    background-color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
-    position: relative;
-    display: inline-block;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: '';
-    position: absolute;
-    width: 32px; /* Mismo ancho que el principal */
-    height: 3px; /* Reducido de 4px a 3px */
-    background-color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
-    transition: all 0.3s ease;
-}
-
-.navbar-toggler-icon::before {
-    top: -8px; /* Reducido de -12px a -8px */
-}
-
-.navbar-toggler-icon::after {
-    bottom: -8px; /* Reducido de -12px a -8px */
-}
-
-.hamburger-text {
-    font-size: 14px; /* Reducido a 14px para coincidir mejor con otros botones */
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
-    font-weight: normal; /* Eliminada la negrita */
-    margin-top: 3px; /* Ajustado el margen */
-}
-
-/* MENÚ DESPLEGABLE ELEGANTE */
-.elegant-dropdown-menu {
-    position: fixed; /* Cambiado a fixed para mejor control */
-    bottom: 90px; /* Posicionado justo encima de la barra (altura 90px) */
-    /* Centrado respecto a la pantalla con el mismo ancho que el header */
-    left: 50%;
-    transform: translateX(-50%);
-    background: #f8f9fa; /* Mismo color gris claro que los cuadros de libros */
-    border: 1px solid #e8e8e8; /* Mismo borde que los content-section */
-    border-radius: 15px;
-    box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
-    z-index: 1000;
-    margin-bottom: 10px;
-    padding: 20px 0; /* Sin padding lateral - solo vertical */
-    /* Tamaño que coincide con el header (ancho completo disponible) */
-    width: 1060px; /* Ancho completo como el header */
-    max-width: calc(100vw - 20px); /* Margen mínimo de 10px a cada lado en móviles */
-    min-height: 300px; /* 50% más alto que antes */
-}
-
-.menu-grid {
-    display: flex;
-    flex-direction: column; /* Cambio a columna para las filas */
-    gap: 20px; /* Espacio entre filas */
-    align-items: center;
-}
-
-/* Filas de menú */
-.menu-row {
-    display: flex;
-    justify-content: space-evenly; /* Distribución uniforme para llenar todo el ancho */
-    gap: 10px; /* Gap reducido */
-    width: 100%;
-    padding: 0 20px; /* Solo un poco de padding interno */
-}
-
-/* Placeholders para botones futuros */
-.menu-placeholder {
-    pointer-events: none; /* No interactuable */
-    opacity: 0.4; /* Más transparente */
-}
-
-.menu-placeholder .icon-circle {
-    border: 2px dashed rgba(85, 51, 6, 0.2); /* Cambiado a rgba del color marrón */
-    background: transparent;
-}
-
-.menu-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    padding: 30px 20px; /* Aumentado para mejor uso del espacio amplio */
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    background: #f8f9fa; /* Mismo color gris claro que los cuadros de libros */
-    border: none; /* Sin borde para consistencia */
-    min-height: 180px; /* Altura mínima para consistencia */
-}
-
-.menu-item:hover {
-    background: #fff; /* Mismo hover que los book-placeholder */
-    transform: translateY(-2px); /* Mismo efecto de elevación que content-section */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Misma sombra que content-section */
-}
-
-.icon-circle {
-    width: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
-    height: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
-    border-radius: 50%;
-    background: #f8f9fa; /* Mismo color gris claro que los cuadros de libros */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px; /* Mantenido el espaciado */
-    transition: all 0.3s ease;
-    border: 2px solid rgba(85, 51, 6, 0.2); /* Cambiado a rgba del color marrón */
-}
-
-.menu-item:hover .icon-circle {
-    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
-    border-color: rgba(85, 51, 6, 0.4); /* Cambiado a rgba del color marrón */
-    transform: scale(1.05);
-}
-
-.icon-circle i {
-    font-size: 40px; /* Aumentado de 36px a 40px para círculos más grandes */
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
-}
-
-.menu-text {
-    font-size: 24px; /* Reducido de 32px para mejor balance web/móvil */
-    font-weight: normal; /* Eliminada la negrita */
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
-    text-align: center;
-    margin-top: 6px; /* Aumentado ligeramente el margen */
-}
-
-.menu-item:hover .menu-text {
-    color: rgba(85, 51, 6, 0.8); /* Cambiado a una versión más clara del color marrón */
-}
-
-/* BOTONES PRINCIPALES INFERIORES */
 .bottom-nav-buttons {
     display: flex;
     gap: 0;
     align-items: stretch;
-    flex: 3; /* Toma 3 partes del espacio disponible */
+    flex: 3;
     height: 100%;
 }
 
 .btn-bottom-nav {
     background: transparent;
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
+    color: rgb(85, 51, 6);
     border: none;
-    padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
+    padding: 10px 5px;
     text-decoration: none;
-    font-weight: normal; /* Eliminada la negrita */
+    font-weight: normal;
     transition: all 0.3s ease;
     font-size: 12px;
     display: flex;
@@ -332,43 +470,42 @@ body {
     justify-content: center;
     flex: 1;
     height: 100%;
-    min-width: 0; /* Permite que los botones se compriman uniformemente */
+    min-width: 0;
 }
 
 .btn-bottom-nav:hover, .btn-bottom-nav.active {
-    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
+    background: rgba(85, 51, 6, 0.1);
+    color: rgb(85, 51, 6);
 }
 
 .btn-bottom-nav.active {
-    background: rgba(85, 51, 6, 0.15); /* Cambiado a rgba del color marrón */
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
-    font-weight: normal; /* Eliminada la negrita */
+    background: rgba(85, 51, 6, 0.15);
+    color: rgb(85, 51, 6);
+    font-weight: normal;
 }
 
 .btn-bottom-nav i {
-    font-size: 32px; /* Reducido de 52px a 32px - tamaño equilibrado */
-    margin-bottom: 5px; /* Ajustado el margen */
+    font-size: 32px;
+    margin-bottom: 5px;
 }
 
 .btn-bottom-nav span {
-    font-size: 20px; /* Reducido de 34px a 20px - más legible */
+    font-size: 20px;
 }
 
-/* BOTÓN DE BÚSQUEDA */
 .search-btn-container {
     display: flex;
     align-items: stretch;
     height: 100%;
-    flex: 1; /* Toma 1 parte del espacio disponible */
+    flex: 1;
 }
 
 .btn-search {
     background: transparent;
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
+    color: rgb(85, 51, 6);
     border: none;
-    padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
-    font-weight: normal; /* Eliminada la negrita */
+    padding: 10px 5px;
+    font-weight: normal;
     transition: all 0.3s ease;
     font-size: 12px;
     display: flex;
@@ -377,24 +514,176 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    min-width: 0; /* Permite que el botón se comprima uniformemente */
+    min-width: 0;
 }
 
 .btn-search:hover {
-    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
-    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
+    background: rgba(85, 51, 6, 0.1);
+    color: rgb(85, 51, 6);
 }
 
 .btn-search i {
-    font-size: 32px; /* Reducido de 52px a 32px - tamaño equilibrado */
-    margin-bottom: 5px; /* Ajustado el margen */
+    font-size: 32px;
+    margin-bottom: 5px;
 }
 
 .btn-search span {
-    font-size: 20px; /* Reducido de 34px a 20px - más legible */
+    font-size: 20px;
 }
 
-/* MODAL DE BÚSQUEDA */
+/* Menú hamburguesa */
+.hamburger-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 1;
+    background: transparent;
+    transition: background 0.3s ease;
+    min-width: 0;
+}
+
+.hamburger-menu-container:hover {
+    background: rgba(85, 51, 6, 0.1);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 8px 10px;
+    background: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    width: 32px;
+    height: 3px;
+    background-color: rgb(85, 51, 6);
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 3px;
+    background-color: rgb(85, 51, 6);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -8px;
+}
+
+.hamburger-text {
+    font-size: 12px;
+    color: rgb(85, 51, 6);
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* Menú desplegable */
+.elegant-dropdown-menu {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8f9fa;
+    border: 1px solid #e8e8e8;
+    border-radius: 15px;
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    width: 1060px;
+    max-width: calc(100vw - 20px);
+    min-height: 300px;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    border: none;
+    min-height: 180px;
+}
+
+.menu-item:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-placeholder {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.menu-placeholder .icon-circle {
+    border: 2px dashed rgba(85, 51, 6, 0.2);
+    background: transparent;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(85, 51, 6, 0.2);
+}
+
+.menu-item:hover .icon-circle {
+    background: rgba(85, 51, 6, 0.1);
+    border-color: rgba(85, 51, 6, 0.4);
+    transform: scale(1.05);
+}
+
+.icon-circle i {
+    font-size: 40px;
+    color: rgb(85, 51, 6);
+}
+
+.menu-text {
+    font-size: 24px;
+    font-weight: normal;
+    color: rgb(85, 51, 6);
+    text-align: center;
+    margin-top: 6px;
+}
+
+.menu-item:hover .menu-text {
+    color: rgba(85, 51, 6, 0.8);
+}
+
+/* ========================================
+   MODAL DE BÚSQUEDA
+   ======================================== */
+
 .search-container {
     text-align: center;
 }
@@ -422,182 +711,144 @@ body {
     border-color: rgba(85, 51, 6, 0.9);
 }
 
-/* RESPONSIVE */
+/* ========================================
+   RESPONSIVE MOBILE
+   ======================================== */
+
 @media (max-width: 768px) {
     html, body {
-        width: 100% !important;
-        height: auto;
-        margin: 0;
         padding-bottom: 60px;
-        padding-top: 55px; /* Aumentado de 40px a 55px para compensar header más alto */
-        min-height: 100vh;
-    }
-    
-    #container {
-        width: 100% !important;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
+        padding-top: 55px;
     }
     
     #dark-header {
-        padding: 12px 0; /* Aumentado de 6px a 12px para consistencia */
-        margin: 0; /* Sin margen en móvil */
+        padding: 12px 0;
     }
     
     #dark-header p {
-        font-size: 16px; /* Mantenemos el tamaño legible en móvil */
-        margin: 0; /* Sin margen */
+        font-size: 16px;
     }
     
-    /* TOP HEADER EN MÓVIL */
-    #top-header {
-        margin: 0 !important; /* Forzar sin margen en móvil */
-        border-bottom: none !important; /* Sin borde en móvil */
-        padding: 12px 0; /* Padding reducido en móvil */
+    /* Página de inicio en móvil */
+    body.inicio-page {
+        padding-top: 85px;
     }
     
-    #top-header h1 {
-        font-size: 24px; /* Más pequeño en móvil */
-        margin: 0; /* Sin margen */
+    #nav-header {
+        padding: 2px 0;
     }
     
-    /* CONTENEDOR DE CONTENIDO EN MÓVIL */
-    #content-container {
-        margin: 0 !important; /* Sin margen en móvil */
-        border-radius: 0 !important; /* Sin border-radius en móvil */
-        box-shadow: none !important; /* Sin sombra en móvil */
-    }
-    
-    /* NAVEGACIÓN EN MÓVIL - TAMAÑOS OPTIMIZADOS */
-    #nav-header .nav-buttons {
-        padding: 16px 12px; /* Más padding para mejor toque */
+    .nav-buttons {
+        gap: 8px;
+        flex-wrap: nowrap;
     }
     
     .nav-btn {
-        font-size: 18px !important; /* Más grande para móvil */
-        padding: 12px 16px !important; /* Más padding para mejor toque */
-        margin: 0 6px; /* Más separación entre botones */
+        flex: 1;
+        max-width: 90px;
+        padding: 10px 6px !important;
+        font-size: 15px !important;
+        white-space: nowrap;
     }
     
+    #main-content-container {
+        margin: 5px 8px 10px 8px;
+        padding: 15px 10px;
+    }
+    
+    .content-section {
+        padding: 15px 12px;
+        margin: 6px 0;
+    }
+    
+    .intro-section {
+        margin: 5px 0 10px 0;
+    }
+    
+    .intro-header h3 {
+        font-size: 20px;
+    }
+    
+    .intro-content p {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    /* Book cards en móvil */
+    .book-card {
+        gap: 10px;
+        padding: 15px 12px;
+    }
+    
+    .book-image-container {
+        flex: 0 0 25%;
+        max-width: 80px;
+        min-width: 70px;
+    }
+    
+    .book-title {
+        font-size: 13px !important;
+    }
+    
+    .book-description {
+        font-size: 12px;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+    
+    /* Navegación inferior en móvil */
     .bottom-navbar {
         height: 60px;
     }
     
-    #top-header h1 {
-        font-size: 28px;
-    }
-    
-    #content-container {
-        margin: 10px;
-        padding: 20px 15px;
-    }
-    
     .books-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Libros más grandes */
-        gap: 20px; /* Más espacio entre libros */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
         padding: 0 10px;
     }
     
-    .hamburger-menu-container {
-        min-width: 60px;
-    }
-    
     .btn-bottom-nav, .btn-search {
-        font-size: 14px !important; /* Más grande para móvil */
+        font-size: 14px !important;
         padding: 12px 14px !important;
     }
     
     .btn-bottom-nav i, .btn-search i {
-        font-size: 18px !important; /* Iconos más grandes */
+        font-size: 18px !important;
     }
     
     .btn-bottom-nav span, .btn-search span {
-        font-size: 12px !important; /* Texto más legible */
+        font-size: 12px !important;
     }
     
-    .btn-search {
-        min-width: 70px; /* Más ancho para mejor toque */
-    }
-    
-    /* MENÚ RESPONSIVO EN MÓVIL */
+    /* Menú desplegable en móvil */
     .elegant-dropdown-menu {
-        /* En móvil: aprovecha casi todo el ancho de la pantalla */
-        left: 50%;
-        transform: translateX(-50%);
-        width: calc(100vw - 4px); /* Solo 2px de margen a cada lado - máximo ancho */
+        width: calc(100vw - 4px);
         max-width: calc(100vw - 4px);
-        min-width: auto;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 15px 0; /* Solo padding vertical en móvil */
+        padding: 15px 0;
     }
     
     .menu-row {
-        padding: 0 10px; /* Padding mínimo en móvil */
-        gap: 5px; /* Gap mínimo en móvil */
-        justify-content: space-evenly; /* Distribución uniforme */
-    }
-    
-    .menu-grid {
-        gap: 15px; /* Reducido para móvil */
-    }
-    
-    .menu-row {
-        gap: 15px; /* Reducido para móvil */
-        flex-wrap: wrap; /* Permite wrap si es necesario */
+        padding: 0 10px;
+        gap: 5px;
     }
     
     .menu-item {
         padding: 15px 5px;
-        min-height: 120px; /* Reducido para móvil */
+        min-height: 120px;
     }
     
     .icon-circle {
-        width: 50px; /* Más pequeño en móvil */
+        width: 50px;
         height: 50px;
     }
     
     .icon-circle i {
-        font-size: 20px; /* Más pequeño en móvil */
+        font-size: 20px;
     }
     
     .menu-text {
-        font-size: 14px; /* Tamaño legible en móvil */
-        line-height: 1.2;
+        font-size: 14px;
     }
-}
-
-/* ========================================
-   ESTILOS PARA PÁGINA DE INICIO
-   ======================================== */
-
-/* BODY ESPECÍFICO PARA PÁGINA DE INICIO */
-body.inicio-page {
-    padding-top: 85px; /* Ajustado para los headers más altos (47px + 38px aprox) */
-}
-
-/* HEADER DE NAVEGACIÓN */
-#nav-header {
-    background: #faf8f6;
-    color: black;
-    text-align: center;
-    padding: 6px 0; /* Reducido de 10px a 6px */
-    font-weight: normal;
-    border-bottom: 2px solid #ddd;
-    position: fixed;
-    top: 47px; /* Ajustado para el nuevo tamaño del header oscuro (15px padding + borde) */
-    left: 0;
-    width: 100vw;
-    z-index: 998; /* Un poco menos que el header oscuro */
-    margin: 0;
-}
-
-.nav-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Reducido de 40px a 30px para 4 botones */
-    align-items: center;
 }
 
 .nav-btn {
@@ -677,6 +928,85 @@ body.inicio-page {
     line-height: 1.5;
 }
 
+/* SECCIÓN DE INTRODUCCIÓN COLAPSABLE */
+.intro-section {
+    background: linear-gradient(135deg, #f5f2ed 0%, #e8ddd4 100%);
+    border: 2px solid #d4c4b0;
+    margin: 5px 0 15px 0; /* Más margen inferior para separar de las cards */
+}
+
+.intro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: 0; /* Sin padding extra */
+    margin: 0;
+}
+
+.intro-header h3 {
+    color: rgb(85, 51, 6); /* Color marrón del tema */
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.intro-header h3 i {
+    color: rgb(85, 51, 6);
+}
+
+.collapse-icon {
+    color: rgb(85, 51, 6);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.intro-header[aria-expanded="false"] .collapse-icon {
+    transform: rotate(-90deg);
+}
+
+.intro-header:hover {
+    background: rgba(85, 51, 6, 0.05);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: -8px -12px;
+}
+
+.intro-content {
+    padding-top: 20px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.intro-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.intro-content ul {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.intro-content li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.intro-content strong {
+    color: rgb(85, 51, 6);
+    font-weight: 600;
+}
+
+.intro-content em {
+    color: rgb(85, 51, 6);
+    font-style: italic;
+    font-weight: 500;
+}
+
 /* ESTILOS PARA BOOK CARDS */
 .book-card {
     display: flex;
@@ -684,6 +1014,7 @@ body.inicio-page {
     align-items: flex-start;
     padding: 20px; /* Reducido de 25px a 20px */
     flex-direction: column; /* Cambiar a columna para acomodar el badge */
+    font-family: Georgia, 'Times New Roman', serif; /* Georgia solo para las cards de libros */
 }
 
 .book-popularity {
@@ -861,6 +1192,42 @@ body.inicio-page {
     .content-section p {
         font-size: 16px; /* Texto más legible */
         line-height: 1.6; /* Mayor espacio entre líneas */
+    }
+    
+    /* SECCIÓN DE INTRODUCCIÓN EN MÓVIL */
+    .intro-section {
+        margin: 5px 0 10px 0; /* Márgenes reducidos para móvil */
+    }
+    
+    .intro-header h3 {
+        font-size: 20px; /* Más pequeño en móvil */
+    }
+    
+    .intro-header h3 i {
+        font-size: 18px; /* Icono más pequeño */
+        margin-right: 8px; /* Reducir margen */
+    }
+    
+    .collapse-icon {
+        font-size: 16px; /* Más pequeño en móvil */
+    }
+    
+    .intro-content {
+        padding-top: 15px; /* Menos padding en móvil */
+    }
+    
+    .intro-content p {
+        font-size: 15px; /* Ligeramente más pequeño */
+        margin-bottom: 12px; /* Menos margen */
+    }
+    
+    .intro-content ul {
+        padding-left: 20px; /* Menos indentación */
+    }
+    
+    .intro-content li {
+        margin-bottom: 6px; /* Menos espacio entre items */
+        font-size: 15px;
     }
     
     /* RESPONSIVE PARA BOOK CARDS */
