@@ -404,11 +404,19 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     html, body {
-        width: 100%;
+        width: 100% !important;
         height: auto;
         margin: 0;
         padding-bottom: 60px;
         padding-top: 50px; /* Espacio para el header fijo oscuro en móvil */
+        min-height: 100vh;
+    }
+    
+    #container {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
     }
     
     #dark-header {
@@ -416,7 +424,18 @@ body {
     }
     
     #dark-header p {
-        font-size: 14px; /* Texto ligeramente más pequeño en móvil */
+        font-size: 16px; /* Mantenemos el tamaño legible en móvil */
+    }
+    
+    /* NAVEGACIÓN EN MÓVIL - TAMAÑOS OPTIMIZADOS */
+    #nav-header .nav-buttons {
+        padding: 16px 12px; /* Más padding para mejor toque */
+    }
+    
+    .nav-btn {
+        font-size: 18px !important; /* Más grande para móvil */
+        padding: 12px 16px !important; /* Más padding para mejor toque */
+        margin: 0 6px; /* Más separación entre botones */
     }
     
     .bottom-navbar {
@@ -433,8 +452,9 @@ body {
     }
     
     .books-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Libros más grandes */
+        gap: 20px; /* Más espacio entre libros */
+        padding: 0 10px;
     }
     
     .hamburger-menu-container {
@@ -442,20 +462,20 @@ body {
     }
     
     .btn-bottom-nav, .btn-search {
-        font-size: 11px;
-        padding: 8px 10px;
+        font-size: 14px !important; /* Más grande para móvil */
+        padding: 12px 14px !important;
     }
     
     .btn-bottom-nav i, .btn-search i {
-        font-size: 12px;
+        font-size: 18px !important; /* Iconos más grandes */
     }
     
     .btn-bottom-nav span, .btn-search span {
-        font-size: 9px;
+        font-size: 12px !important; /* Texto más legible */
     }
     
     .btn-search {
-        min-width: 60px;
+        min-width: 70px; /* Más ancho para mejor toque */
     }
     
     /* MENÚ RESPONSIVO EN MÓVIL */
@@ -608,22 +628,54 @@ body.inicio-page {
 @media (max-width: 768px) {
     body.inicio-page {
         padding-top: 85px; /* Ajustado para ambos headers en móvil (50px + 35px) */
+        width: 100% !important;
+        max-width: 100%;
     }
     
     #nav-header {
-        padding: 8px 0; /* Altura reducida en móvil */
+        padding: 12px 0; /* Altura aumentada para mejor toque */
+        width: 100%;
     }
     
     .nav-buttons {
-        flex-direction: column;
-        gap: 10px; /* Reducido para móvil */
+        justify-content: space-around; /* Distribución uniforme */
+        gap: 8px; /* Espacio mínimo entre botones */
+        flex-wrap: wrap;
     }
     
     .nav-btn {
-        width: 80%;
+        flex: 1;
+        min-width: calc(25% - 6px); /* 4 botones por fila con espacio */
         text-align: center;
-        padding: 8px 16px; /* Padding reducido en móvil */
-        font-size: 14px; /* Texto más pequeño en móvil */
+        padding: 12px 8px !important; /* Más padding para mejor toque */
+        font-size: 16px !important; /* Texto más grande y legible */
+        margin: 2px; /* Margen mínimo */
+    }
+    
+    /* CONTENIDO PRINCIPAL EN MÓVIL */
+    #main-content-container {
+        padding: 20px 15px; /* Más padding lateral */
+        margin-top: 20px;
+    }
+    
+    .main-content-area {
+        gap: 20px; /* Más espacio entre secciones */
+    }
+    
+    .content-section {
+        padding: 25px 20px; /* Más padding interno */
+        margin: 10px 0; /* Más separación vertical */
+    }
+    
+    .content-section h3 {
+        font-size: 22px; /* Títulos más grandes */
+        margin-bottom: 12px;
+    }
+    
+    .content-section p {
+        font-size: 16px; /* Texto más legible */
+        line-height: 1.6; /* Mayor espacio entre líneas */
+    }
     }
     
     #main-content-container {
@@ -636,10 +688,12 @@ body.inicio-page {
     }
     
     .content-section h3 {
-        font-size: 20px;
+        font-size: 22px; /* Títulos más grandes */
+        margin-bottom: 12px;
     }
     
     .content-section p {
-        font-size: 14px;
+        font-size: 16px; /* Texto más legible */
+        line-height: 1.6; /* Mayor espacio entre líneas */
     }
 }
