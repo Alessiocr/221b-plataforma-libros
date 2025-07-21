@@ -20,7 +20,7 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
     padding-bottom: 90px; /* Ajustado de 140px a 90px para la barra más pequeña */
-    padding-top: 45px; /* Reducido para pegar mejor con el dark-header */
+    padding-top: 50px; /* Aumentado de 35px a 50px para compensar header más alto */
 }
 
 /* CONTAINER PRINCIPAL */
@@ -34,7 +34,7 @@ body {
     background: #323232;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 15px 0; /* Aumentado de 8px a 15px */
     font-weight: normal;
     position: fixed;
     top: 0;
@@ -163,7 +163,7 @@ body {
 }
 
 .hamburger-menu-container:hover {
-    background: rgba(50, 50, 50, 0.1);
+    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
 }
 
 .navbar-toggler {
@@ -176,7 +176,7 @@ body {
     background-image: none;
     width: 32px; /* Tamaño similar a los iconos de otros botones */
     height: 3px; /* Reducido de 4px a 3px */
-    background-color: #323232;
+    background-color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     position: relative;
     display: inline-block;
 }
@@ -187,7 +187,7 @@ body {
     position: absolute;
     width: 32px; /* Mismo ancho que el principal */
     height: 3px; /* Reducido de 4px a 3px */
-    background-color: #323232;
+    background-color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     transition: all 0.3s ease;
 }
 
@@ -201,7 +201,7 @@ body {
 
 .hamburger-text {
     font-size: 14px; /* Reducido a 14px para coincidir mejor con otros botones */
-    color: #323232;
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     font-weight: normal; /* Eliminada la negrita */
     margin-top: 3px; /* Ajustado el margen */
 }
@@ -249,7 +249,7 @@ body {
 }
 
 .menu-placeholder .icon-circle {
-    border: 2px dashed rgba(50, 50, 50, 0.2); /* Borde punteado */
+    border: 2px dashed rgba(85, 51, 6, 0.2); /* Cambiado a rgba del color marrón */
     background: transparent;
 }
 
@@ -282,30 +282,30 @@ body {
     justify-content: center;
     margin-bottom: 15px; /* Mantenido el espaciado */
     transition: all 0.3s ease;
-    border: 2px solid rgba(50, 50, 50, 0.2); /* Devuelto el borde estético */
+    border: 2px solid rgba(85, 51, 6, 0.2); /* Cambiado a rgba del color marrón */
 }
 
 .menu-item:hover .icon-circle {
-    background: rgba(50, 50, 50, 0.1); /* Cambiado a gris oscuro con transparencia */
-    border-color: rgba(50, 50, 50, 0.4); /* Devuelto el borde hover */
+    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
+    border-color: rgba(85, 51, 6, 0.4); /* Cambiado a rgba del color marrón */
     transform: scale(1.05);
 }
 
 .icon-circle i {
     font-size: 40px; /* Aumentado de 36px a 40px para círculos más grandes */
-    color: #323232;
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
 }
 
 .menu-text {
     font-size: 24px; /* Reducido de 32px para mejor balance web/móvil */
     font-weight: normal; /* Eliminada la negrita */
-    color: #323232; /* Cambiado a gris oscuro */
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     text-align: center;
     margin-top: 6px; /* Aumentado ligeramente el margen */
 }
 
 .menu-item:hover .menu-text {
-    color: #1a1a1a; /* Cambiado a un gris aún más oscuro para el hover */
+    color: rgba(85, 51, 6, 0.8); /* Cambiado a una versión más clara del color marrón */
 }
 
 /* BOTONES PRINCIPALES INFERIORES */
@@ -319,7 +319,7 @@ body {
 
 .btn-bottom-nav {
     background: transparent;
-    color: #323232;
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     border: none;
     padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
     text-decoration: none;
@@ -336,13 +336,13 @@ body {
 }
 
 .btn-bottom-nav:hover, .btn-bottom-nav.active {
-    background: rgba(50, 50, 50, 0.1);
-    color: #323232;
+    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
 }
 
 .btn-bottom-nav.active {
-    background: rgba(50, 50, 50, 0.15);
-    color: #323232;
+    background: rgba(85, 51, 6, 0.15); /* Cambiado a rgba del color marrón */
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     font-weight: normal; /* Eliminada la negrita */
 }
 
@@ -365,7 +365,7 @@ body {
 
 .btn-search {
     background: transparent;
-    color: #323232;
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
     border: none;
     padding: 10px 5px; /* Reducido padding horizontal para uniformidad */
     font-weight: normal; /* Eliminada la negrita */
@@ -381,8 +381,8 @@ body {
 }
 
 .btn-search:hover {
-    background: rgba(50, 50, 50, 0.1);
-    color: #323232;
+    background: rgba(85, 51, 6, 0.1); /* Cambiado a rgba del color marrón */
+    color: rgb(85, 51, 6); /* Cambiado de #323232 a rgb(85, 51, 6) */
 }
 
 .btn-search i {
@@ -429,7 +429,7 @@ body {
         height: auto;
         margin: 0;
         padding-bottom: 60px;
-        padding-top: 50px; /* Espacio para el header fijo oscuro en móvil */
+        padding-top: 55px; /* Aumentado de 40px a 55px para compensar header más alto */
         min-height: 100vh;
     }
     
@@ -441,7 +441,7 @@ body {
     }
     
     #dark-header {
-        padding: 12px 0; /* Padding ligeramente reducido en móvil */
+        padding: 12px 0; /* Aumentado de 6px a 12px para consistencia */
         margin: 0; /* Sin margen en móvil */
     }
     
@@ -574,7 +574,7 @@ body {
 
 /* BODY ESPECÍFICO PARA PÁGINA DE INICIO */
 body.inicio-page {
-    padding-top: 90px; /* Espacio para ambos headers fijos (50px + 40px) */
+    padding-top: 85px; /* Ajustado para los headers más altos (47px + 38px aprox) */
 }
 
 /* HEADER DE NAVEGACIÓN */
@@ -582,11 +582,11 @@ body.inicio-page {
     background: #faf8f6;
     color: black;
     text-align: center;
-    padding: 10px 0; /* Reducido de 15px a 10px */
+    padding: 6px 0; /* Reducido de 10px a 6px */
     font-weight: normal;
     border-bottom: 2px solid #ddd;
     position: fixed;
-    top: 50px; /* Justo debajo del header oscuro */
+    top: 47px; /* Ajustado para el nuevo tamaño del header oscuro (15px padding + borde) */
     left: 0;
     width: 100vw;
     z-index: 998; /* Un poco menos que el header oscuro */
@@ -596,7 +596,7 @@ body.inicio-page {
 .nav-buttons {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Aumentado a 40px para mejor distribución del espacio */
+    gap: 30px; /* Reducido de 40px a 30px para 4 botones */
     align-items: center;
 }
 
@@ -604,11 +604,11 @@ body.inicio-page {
     background: transparent;
     color: #323232;
     border: none;
-    padding: 14px 28px; /* Aumentado a 14px 28px */
+    padding: 12px 24px; /* Reducido de 14px 28px para mejor ajuste con 4 botones */
     text-decoration: none;
     font-weight: normal;
     transition: all 0.3s ease;
-    font-size: 20px; /* Aumentado de 18px a 20px */
+    font-size: 18px; /* Reducido de 20px a 18px para mejor proporción */
     border-radius: 5px;
 }
 
@@ -680,19 +680,19 @@ body.inicio-page {
 /* RESPONSIVE PARA PÁGINA DE INICIO */
 @media (max-width: 768px) {
     body.inicio-page {
-        padding-top: 85px; /* Ajustado para ambos headers en móvil (50px + 35px) */
+        padding-top: 100px; /* Ajustado para ambos headers más altos en móvil */
         width: 100% !important;
         max-width: 100%;
     }
     
     #nav-header {
-        padding: 12px 0; /* Altura aumentada para mejor toque */
+        padding: 4px 0; /* Padding reducido consistente con desktop */
         width: 100%;
     }
     
     .nav-buttons {
-        justify-content: center; /* Centrado para 3 botones */
-        gap: 12px; /* Más espacio entre botones */
+        justify-content: center; /* Centrado para 4 botones */
+        gap: 8px; /* Reducido de 12px a 8px para mejor ajuste */
         flex-wrap: nowrap; /* No permitir wrap */
         width: 100%;
         max-width: 100%;
@@ -700,10 +700,10 @@ body.inicio-page {
     
     .nav-btn {
         flex: 1;
-        max-width: 120px; /* Ancho máximo fijo para cada botón */
+        max-width: 90px; /* Reducido de 120px a 90px para 4 botones */
         text-align: center;
-        padding: 12px 8px !important; /* Padding uniforme */
-        font-size: 14px !important; /* Tamaño reducido para mejor ajuste */
+        padding: 14px 6px !important; /* Padding ajustado para mejor ajuste */
+        font-size: 16px !important; /* Aumentado de 14px a 16px para mejor legibilidad */
         margin: 0; /* Sin margen */
         white-space: nowrap; /* No permitir salto de línea */
     }
