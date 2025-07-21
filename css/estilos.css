@@ -19,13 +19,13 @@ body {
     height: 1181px;
     margin: 0 auto;
     overflow-x: hidden;
-    padding-bottom: 140px; /* DUPLICADO: de 70px a 140px para la barra fija inferior más alta */
+    padding-bottom: 90px; /* Ajustado de 140px a 90px para la barra más pequeña */
 }
 
 /* CONTAINER PRINCIPAL */
 #container {
     width: 100%;
-    min-height: calc(100vh - 140px); /* Ajustado para la nueva altura de barra */
+    min-height: calc(100vh - 90px); /* Ajustado para la nueva altura de barra */
 }
 
 /* HEADER SUPERIOR AMARILLO */
@@ -111,7 +111,7 @@ body {
     padding: 0;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
-    height: 140px; /* DUPLICADO: de 70px a 140px (x2) para acomodar botones más grandes */
+    height: 90px; /* Reducido de 140px a 90px - más equilibrado */
 }
 
 .bottom-nav-content {
@@ -145,14 +145,14 @@ body {
 
 .navbar-toggler {
     border: none;
-    padding: 8px 16px; /* DUPLICADO: de 4px 8px a 8px 16px (x2) */
+    padding: 6px 12px; /* Reducido de 8px 16px a 6px 12px */
     background: none;
 }
 
 .navbar-toggler-icon {
     background-image: none;
-    width: 40px; /* DUPLICADO: de 20px a 40px (x2) */
-    height: 4px; /* DUPLICADO: de 2px a 4px (x2) */
+    width: 28px; /* Reducido de 40px a 28px */
+    height: 3px; /* Reducido de 4px a 3px */
     background-color: rgb(85, 51, 6);
     position: relative;
     display: inline-block;
@@ -162,25 +162,25 @@ body {
 .navbar-toggler-icon::after {
     content: '';
     position: absolute;
-    width: 40px; /* DUPLICADO: de 20px a 40px (x2) */
-    height: 4px; /* DUPLICADO: de 2px a 4px (x2) */
+    width: 28px; /* Reducido de 40px a 28px */
+    height: 3px; /* Reducido de 4px a 3px */
     background-color: rgb(85, 51, 6);
     transition: all 0.3s ease;
 }
 
 .navbar-toggler-icon::before {
-    top: -12px; /* DUPLICADO: de -6px a -12px (x2) */
+    top: -8px; /* Reducido de -12px a -8px */
 }
 
 .navbar-toggler-icon::after {
-    bottom: -12px; /* DUPLICADO: de -6px a -12px (x2) */
+    bottom: -8px; /* Reducido de -12px a -8px */
 }
 
 .hamburger-text {
-    font-size: 34px; /* DUPLICADO: de 17px a 34px (x2) para coincidir con los botones */
+    font-size: 20px; /* Reducido de 34px a 20px - coincide con botones */
     color: rgb(85, 51, 6);
     font-weight: normal; /* Eliminada la negrita */
-    margin-top: 4px; /* Aumentado ligeramente el margen */
+    margin-top: 3px; /* Ajustado el margen */
 }
 
 /* MENÚ DESPLEGABLE ELEGANTE */
@@ -299,12 +299,12 @@ body {
 }
 
 .btn-bottom-nav i {
-    font-size: 52px; /* DUPLICADO: de 26px a 52px (x2) */
-    margin-bottom: 8px; /* Aumentado el margen para los iconos más grandes */
+    font-size: 32px; /* Reducido de 52px a 32px - tamaño equilibrado */
+    margin-bottom: 5px; /* Ajustado el margen */
 }
 
 .btn-bottom-nav span {
-    font-size: 34px; /* DUPLICADO: de 17px a 34px (x2) */
+    font-size: 20px; /* Reducido de 34px a 20px - más legible */
 }
 
 /* BOTÓN DE BÚSQUEDA */
@@ -338,12 +338,12 @@ body {
 }
 
 .btn-search i {
-    font-size: 52px; /* DUPLICADO: de 26px a 52px (x2) */
-    margin-bottom: 8px; /* Aumentado el margen para los iconos más grandes */
+    font-size: 32px; /* Reducido de 52px a 32px - tamaño equilibrado */
+    margin-bottom: 5px; /* Ajustado el margen */
 }
 
 .btn-search span {
-    font-size: 34px; /* DUPLICADO: de 17px a 34px (x2) */
+    font-size: 20px; /* Reducido de 34px a 20px - más legible */
 }
 
 /* MODAL DE BÚSQUEDA */
