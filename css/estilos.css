@@ -194,16 +194,20 @@ body {
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
     z-index: 1000;
     margin-bottom: 10px;
-    padding: 30px; /* Restaurado a un tamaño más manejable */
-    /* Tamaño restaurado a dimensiones originales mejoradas */
-    min-width: 400px; /* Restaurado a tamaño original mejorado */
-    max-width: 480px; /* Restaurado a tamaño original mejorado */
+    padding: 40px; /* Aumentado para más contenido */
+    /* Tamaño expandido para abarcar el ancho del contenedor central */
+    width: 1020px; /* Ancho del contenedor central (1060px - 40px padding) */
+    min-height: 300px; /* 50% más alto que antes (200px + 50% = 300px) */
+    /* Centrar el menú respecto al contenedor */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Restaurado a 2 columnas como estaba originalmente */
-    gap: 20px; /* Restaurado a un gap más manejable */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para aprovechar el ancho amplio */
+    gap: 30px; /* Gap más amplio para mejor distribución */
+    align-items: start;
 }
 
 .menu-item {
@@ -211,11 +215,12 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    padding: 20px 15px; /* Restaurado al tamaño original mejorado */
+    padding: 30px 20px; /* Aumentado para mejor uso del espacio amplio */
     border-radius: 12px;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(85, 51, 6, 0.1);
+    min-height: 180px; /* Altura mínima para consistencia */
 }
 
 .menu-item:hover {
@@ -225,14 +230,14 @@ body {
 }
 
 .icon-circle {
-    width: 70px; /* Restaurado a tamaño original mejorado */
-    height: 70px; /* Restaurado a tamaño original mejorado */
+    width: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
+    height: 80px; /* Aumentado de 70px a 80px para el espacio más amplio */
     border-radius: 50%;
     background: rgba(85, 51, 6, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px; /* Restaurado a margen original mejorado */
+    margin-bottom: 15px; /* Mantenido el espaciado */
     transition: all 0.3s ease;
     border: 2px solid rgba(85, 51, 6, 0.2);
 }
@@ -244,16 +249,16 @@ body {
 }
 
 .icon-circle i {
-    font-size: 36px; /* Restaurado a tamaño proporcional con el menú */
+    font-size: 40px; /* Aumentado de 36px a 40px para círculos más grandes */
     color: rgb(85, 51, 6);
 }
 
 .menu-text {
-    font-size: 26px; /* Restaurado a tamaño proporcional con el menú */
+    font-size: 28px; /* Aumentado de 26px a 28px para mejor legibilidad */
     font-weight: normal; /* Eliminada la negrita */
     color: rgb(85, 51, 6);
     text-align: center;
-    margin-top: 4px; /* Aumentado ligeramente */
+    margin-top: 6px; /* Aumentado ligeramente el margen */
 }
 
 .menu-item:hover .menu-text {
