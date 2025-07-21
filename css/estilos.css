@@ -177,7 +177,7 @@ body {
 }
 
 .hamburger-text {
-    font-size: 10px;
+    font-size: 13px; /* Aumentado de 10px a 13px */
     color: rgb(85, 51, 6);
     font-weight: normal; /* Eliminada la negrita */
     margin-top: 2px;
@@ -194,16 +194,19 @@ body {
     box-shadow: 0 -8px 25px rgba(0,0,0,0.15);
     z-index: 1000;
     margin-bottom: 10px;
-    padding: 30px; /* Aumentado de 20px a 30px */
-    /* Tamaño aumentado considerablemente */
-    min-width: 400px; /* Aumentado de 280px a 400px */
-    max-width: 480px; /* Aumentado de 320px a 480px */
+    padding: 40px; /* Aumentado de 30px a 40px para más espacio */
+    /* Tamaño aumentado para coincidir con el contenedor central */
+    min-width: 1000px; /* Aumentado significativamente para coincidir con el contenedor central */
+    max-width: 1040px; /* Similar al contenedor central de 1060px */
+    /* Centrar el menú */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Aumentado de 15px a 20px */
+    grid-template-columns: repeat(4, 1fr); /* Cambiado a 4 columnas para mejor distribución con el ancho amplio */
+    gap: 30px; /* Aumentado de 20px a 30px para más espacio */
 }
 
 .menu-item {
@@ -211,7 +214,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    padding: 20px 15px; /* Aumentado de 15px 10px a 20px 15px */
+    padding: 25px 20px; /* Aumentado de 20px 15px a 25px 20px para más espacio */
     border-radius: 12px;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.3);
@@ -225,14 +228,14 @@ body {
 }
 
 .icon-circle {
-    width: 70px; /* Aumentado de 45px a 70px */
-    height: 70px; /* Aumentado de 45px a 70px */
+    width: 90px; /* Aumentado de 70px a 90px para iconos más grandes */
+    height: 90px; /* Aumentado de 70px a 90px para iconos más grandes */
     border-radius: 50%;
     background: rgba(85, 51, 6, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px; /* Aumentado de 8px a 12px */
+    margin-bottom: 15px; /* Aumentado de 12px a 15px */
     transition: all 0.3s ease;
     border: 2px solid rgba(85, 51, 6, 0.2);
 }
@@ -244,12 +247,12 @@ body {
 }
 
 .icon-circle i {
-    font-size: 36px; /* DUPLICADO: de 18px a 36px (x2 respecto a botones) */
+    font-size: 44px; /* DUPLICADO: de 22px a 44px (x2 respecto a botones actualizados) */
     color: rgb(85, 51, 6);
 }
 
 .menu-text {
-    font-size: 26px; /* DUPLICADO: de 13px a 26px (x2 respecto a botones) */
+    font-size: 30px; /* DUPLICADO: de 15px a 30px (x2 respecto a botones actualizados) */
     font-weight: normal; /* Eliminada la negrita */
     color: rgb(85, 51, 6);
     text-align: center;
@@ -299,12 +302,12 @@ body {
 }
 
 .btn-bottom-nav i {
-    font-size: 18px; /* Aumentado de 14px a 18px */
+    font-size: 22px; /* Aumentado de 18px a 22px */
     margin-bottom: 3px; /* Aumentado ligeramente el margen */
 }
 
 .btn-bottom-nav span {
-    font-size: 13px; /* Aumentado de 10px a 13px */
+    font-size: 15px; /* Aumentado de 13px a 15px */
 }
 
 /* BOTÓN DE BÚSQUEDA */
@@ -338,12 +341,12 @@ body {
 }
 
 .btn-search i {
-    font-size: 18px; /* Aumentado de 14px a 18px */
+    font-size: 22px; /* Aumentado de 18px a 22px */
     margin-bottom: 3px; /* Aumentado ligeramente el margen */
 }
 
 .btn-search span {
-    font-size: 13px; /* Aumentado de 10px a 13px */
+    font-size: 15px; /* Aumentado de 13px a 15px */
 }
 
 /* MODAL DE BÚSQUEDA */
